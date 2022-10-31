@@ -12,8 +12,8 @@ import java.util.Collections;
 
 public class Account implements Comparable<Account> {
     private long score = 0;
-    private String userName ;
-    private static ArrayList<Account> accounts = new ArrayList<>();
+    private final String userName ;
+    private static final ArrayList<Account> accounts = new ArrayList<>();
 
     public Account(String userName){
         this.userName=userName;
