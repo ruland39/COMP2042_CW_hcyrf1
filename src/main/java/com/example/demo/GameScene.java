@@ -283,13 +283,13 @@ class GameScene {
         gameScene.addEventHandler(KeyEvent.KEY_PRESSED, key ->{
                 Platform.runLater(() -> {
                     int haveEmptyCell;
-                    if (key.getCode() == KeyCode.DOWN) {
+                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
                         GameScene.this.moveDown();
-                    } else if (key.getCode() == KeyCode.UP) {
+                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
                         GameScene.this.moveUp();
-                    } else if (key.getCode() == KeyCode.LEFT) {
+                    } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
                         GameScene.this.moveLeft();
-                    } else if (key.getCode() == KeyCode.RIGHT) {
+                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
                         GameScene.this.moveRight();
                     }
                     GameScene.this.sumCellNumbersToScore();
