@@ -192,7 +192,7 @@ class GameScene {
 
     private boolean isValidDesH(int i, int j, int des, int sign) {
         if (des + sign < n && des + sign >= 0) {
-            if (cells[i][des + sign].getNumber() == cells[i][j].getNumber() && !cells[i][des + sign].getModify()
+            if (cells[i][des + sign].getNumber() == cells[i][j].getNumber() && cells[i][des + sign].getModify()
                     && cells[i][des + sign].getNumber() != 0) {
                 return true;
             }
@@ -211,7 +211,7 @@ class GameScene {
 
     private boolean isValidDesV(int i, int j, int des, int sign) {
         if (des + sign < n && des + sign >= 0)
-            if (cells[des + sign][j].getNumber() == cells[i][j].getNumber() && !cells[des + sign][j].getModify()
+            if (cells[des + sign][j].getNumber() == cells[i][j].getNumber() && cells[des + sign][j].getModify()
                     && cells[des + sign][j].getNumber() != 0) {
                 return true;
             }

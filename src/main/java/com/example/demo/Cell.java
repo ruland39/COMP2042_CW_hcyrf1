@@ -17,7 +17,7 @@ public class Cell {
     }
 
     boolean getModify() {
-        return modify;
+        return !modify;
     }
 
     Cell(double x, double y, double scale, Group root) {
