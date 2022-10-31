@@ -7,8 +7,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 public class Cell {
-    private Rectangle rectangle;
-    private Group root;
+    private final Rectangle rectangle;
+    private final Group root;
     private Text textClass;
     private boolean modify = false;
 
