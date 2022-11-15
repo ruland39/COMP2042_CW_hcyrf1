@@ -58,7 +58,7 @@ public class Cell {
         cell.setColorByNumber(cell.getNumber());
         setColorByNumber(getNumber());
     }
-
+    //refactor using enhance switch statement
     void setColorByNumber(int number) {
         switch (number) {
             case 0 -> rectangle.setFill(Color.rgb(224, 226, 226, 0.5));

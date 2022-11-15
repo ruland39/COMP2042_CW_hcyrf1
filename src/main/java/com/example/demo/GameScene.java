@@ -21,6 +21,11 @@ class GameScene {
     private Group root;
     private long score = 0;
 
+    //additions
+    //Rounded Corners
+    private static final int ARC_WIDTH = 15;
+    private static final int ARC_HEIGHT = 15;
+
     static void setN(int number) {
         n = number;
         LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
@@ -283,6 +288,7 @@ class GameScene {
         gameScene.addEventHandler(KeyEvent.KEY_PRESSED, key ->{
                 Platform.runLater(() -> {
                     int haveEmptyCell;
+                    //key inputs
                     if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
                         GameScene.this.moveDown();
                     } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
@@ -292,6 +298,7 @@ class GameScene {
                     } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
                         GameScene.this.moveRight();
                     }
+
                     GameScene.this.sumCellNumbersToScore();
                     scoreText.setText(score + "");
                     haveEmptyCell = GameScene.this.haveEmptyCell();
@@ -307,5 +314,6 @@ class GameScene {
                         GameScene.this.randomFillNumber(2);
                 });
             });
+
     }
 }

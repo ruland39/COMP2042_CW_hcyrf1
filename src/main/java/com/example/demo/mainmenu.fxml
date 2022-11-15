@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" style="-fx-background-color: #FFE15D;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#2d3036" layoutX="294.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2048" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS Bold" size="128.0" />
+         </font>
+      </Text>
+      <Button alignment="CENTER" layoutX="319.0" layoutY="450.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="269.0" text="Play" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="48.0" />
+         </font>
+      </Button>
+      <Button layoutX="356.0" layoutY="655.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" text="Leaderboard">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="356.0" layoutY="598.0" mnemonicParsing="false" prefWidth="196.0" text="Account">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

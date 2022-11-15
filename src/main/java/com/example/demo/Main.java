@@ -10,6 +10,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.shape.Rectangle;
@@ -18,6 +19,9 @@ import java.util.Optional;
 import java.util.Scanner;
 
 public class Main extends Application {
+    //Additions
+    // Slide speed animation
+    public static final int SLIDE_SPEED = 20;
     static final int WIDTH = 900;
     static final int HEIGHT = 900;
     private Group gameRoot = new Group();
