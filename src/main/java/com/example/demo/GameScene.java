@@ -208,7 +208,7 @@ class GameScene {
     private void moveHorizontally(int i, int j, int des, int sign) {
         if (isValidDesH(i, j, des, sign)) {
             cells[i][j].adder(cells[i][des + sign]);
-            cells[i][des].setModify(true);
+            cells[i][des + sign].setModify(true);
         } else if (des != j) {
             cells[i][j].changeCell(cells[i][des]);
         }
@@ -228,7 +228,7 @@ class GameScene {
             cells[i][j].adder(cells[des + sign][j]);
             cells[des][j].setModify(true);
         } else if (des != i) {
-            cells[i][j].changeCell(cells[des][j]);
+            cells[i][j].changeCell(cells[des + sign][j]);
         }
     }
 
