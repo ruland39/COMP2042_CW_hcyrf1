@@ -289,14 +289,29 @@ class GameScene {
                 Platform.runLater(() -> {
                     int haveEmptyCell;
                     //key inputs
-                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene.this.moveDown();
-                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                        GameScene.this.moveUp();
-                    } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene.this.moveLeft();
-                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                        GameScene.this.moveRight();
+                    boolean b = false;
+                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
+                     || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
+                    )
+                    {
+                        b = true;
+                    }
+                    else {
+                        b = false;
+                    }
+
+
+                    if(b == true) {
+
+                        if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
+                            GameScene.this.moveDown();
+                        } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
+                            GameScene.this.moveUp();
+                        } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
+                            GameScene.this.moveLeft();
+                        } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
+                            GameScene.this.moveRight();
+                        }
                     }
 
                     GameScene.this.sumCellNumbersToScore();
@@ -310,7 +325,7 @@ class GameScene {
                             root.getChildren().clear();
                             score = 0;
                         }
-                    } else if(haveEmptyCell == 1)
+                    } else if(haveEmptyCell == 1 && b)
                         GameScene.this.randomFillNumber(2);
                 });
             });
