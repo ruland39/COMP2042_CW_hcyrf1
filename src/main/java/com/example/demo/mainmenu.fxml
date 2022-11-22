@@ -16,15 +16,5 @@
             <Font name="Comic Sans MS" size="48.0" />
          </font>
       </Button>
-      <Button layoutX="356.0" layoutY="655.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" text="Leaderboard">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="356.0" layoutY="598.0" mnemonicParsing="false" prefWidth="196.0" text="Account">
-         <font>
-            <Font name="Comic Sans MS" size="24.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
