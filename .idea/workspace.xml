@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="fix cells bug logic">
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="edit package name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/mainmenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/mainmenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +136,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669009771018</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="edit mainmenu.fxml">
+      <created>1669127424806</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669127424806</updated>
+    </task>
+    <task id="LOCAL-00012" summary="edit package name">
+      <created>1669127520897</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669127520897</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +176,9 @@
     <MESSAGE value="add mainmenu.fxml" />
     <MESSAGE value="fix key bug" />
     <MESSAGE value="fix cells bug logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix cells bug logic" />
+    <MESSAGE value="edit mainmenu.fxml" />
+    <MESSAGE value="edit package name" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit package name" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
