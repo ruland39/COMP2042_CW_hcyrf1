@@ -281,17 +281,32 @@ class GameScene {
         //Font for Text
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 40);
 
-        Text text = new Text();
-        root.getChildren().add(text);
-        text.setText("Score");
-        text.setFont(font);
-        text.relocate(730, 100);
+        // Score Text Title
+        Text scoretexttitle = new Text();
+        root.getChildren().add(scoretexttitle);
+        scoretexttitle.setText("Score");
+        scoretexttitle.setFont(font);
+        scoretexttitle.relocate(730, 100);
 
+        // Score Text
         Text scoreText = new Text();
         root.getChildren().add(scoreText);
         scoreText.relocate(760, 180);
         scoreText.setFont(font);
         scoreText.setText("0");
+
+        // HighScore Text Title
+        Text highscoretexttitle = new Text();
+        root.getChildren().add(highscoretexttitle);
+        highscoretexttitle.setText("HighScore");
+        highscoretexttitle.setFont(font);
+        highscoretexttitle.relocate(695, 250);
+
+        // HighScore Text
+
+
+
+
 
         randomFillNumber(1);
         randomFillNumber(1);

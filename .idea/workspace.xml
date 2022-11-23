@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="change button styling using inline css">
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="change score text styling in gamescene">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669215586153</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="change score text styling in gamescene">
+      <created>1669216429128</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669216429128</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,7 +238,8 @@
     <MESSAGE value="implemented retry button" />
     <MESSAGE value="edit endgame: score text title, highscore text title, modified default button" />
     <MESSAGE value="change button styling using inline css" />
-    <option name="LAST_COMMIT_MESSAGE" value="change button styling using inline css" />
+    <MESSAGE value="change score text styling in gamescene" />
+    <option name="LAST_COMMIT_MESSAGE" value="change score text styling in gamescene" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
