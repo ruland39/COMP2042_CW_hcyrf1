@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="edit endgame: score text title, highscore text title, modified default button">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="change button styling using inline css">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669215273072</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change button styling using inline css">
+      <created>1669215586153</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669215586153</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +230,8 @@
     <MESSAGE value="change main menu appearance and change game over background color" />
     <MESSAGE value="implemented retry button" />
     <MESSAGE value="edit endgame: score text title, highscore text title, modified default button" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit endgame: score text title, highscore text title, modified default button" />
+    <MESSAGE value="change button styling using inline css" />
+    <option name="LAST_COMMIT_MESSAGE" value="change button styling using inline css" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -277,15 +278,19 @@ class GameScene {
 
         }
 
+        //Font for Text
+        Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 40);
+
         Text text = new Text();
         root.getChildren().add(text);
-        text.setText("SCORE :");
-        text.setFont(Font.font(30));
-        text.relocate(750, 100);
+        text.setText("Score");
+        text.setFont(font);
+        text.relocate(730, 100);
+
         Text scoreText = new Text();
         root.getChildren().add(scoreText);
-        scoreText.relocate(750, 150);
-        scoreText.setFont(Font.font(20));
+        scoreText.relocate(760, 180);
+        scoreText.setFont(font);
         scoreText.setText("0");
 
         randomFillNumber(1);
