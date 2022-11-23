@@ -14,6 +14,7 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -35,26 +36,49 @@ public class EndGame {
     }
 
     public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score){
+
         //Game Over Text
         Text text = new Text("GAME OVER");
-        text.relocate(250,250);
-        text.setFont(Font.font(80));
+        text.relocate(220,150);
+        text.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
+        text.setFill(Color.BLACK);
         root.getChildren().add(text);
+
+        //Score Text Title
+        Text scoretexttitle = new Text("Score");
+        scoretexttitle.relocate(365,250);
+        scoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
+        scoretexttitle.setFill(Color.BLACK);
+        root.getChildren().add(scoretexttitle);
+
 
         //Score Text
         Text scoreText = new Text(score+"");
+        scoreText.relocate(375,340);
+        scoreText.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         scoreText.setFill(Color.BLACK);
-        scoreText.relocate(350,400);
-        scoreText.setFont(Font.font(80));
         root.getChildren().add(scoreText);
 
+        //HighScore Text Title
+        Text highscoretexttitle = new Text("High Score");
+        highscoretexttitle.relocate(300,450);
+        highscoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
+        highscoretexttitle.setFill(Color.BLACK);
+        root.getChildren().add(highscoretexttitle);
+
+
+
+        //Font for Button
+        Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 20);
 
         //Retry/Play Again Button
         Button retryButton = new Button("Retry");
-        retryButton.setPrefSize(100,30);
+        retryButton.setPrefSize(120,50);
         retryButton.setTextFill(Color.BLACK);
+        retryButton.setFont(font);
         root.getChildren().add(retryButton);
-        retryButton.relocate(400,600);
+        retryButton.relocate(400,700);
+
         retryButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene;
             private Group gameRoot;
@@ -114,11 +138,12 @@ public class EndGame {
 
 
         //Quit Button
-        Button quitButton = new Button("QUIT");
-        quitButton.setPrefSize(100,30);
+        Button quitButton = new Button("Quit");
+        quitButton.setPrefSize(120,50);
         quitButton.setTextFill(Color.BLACK);
+        quitButton.setFont(font);
         root.getChildren().add(quitButton);
-        quitButton.relocate(400,800);
+        quitButton.relocate(400,755);
         quitButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {

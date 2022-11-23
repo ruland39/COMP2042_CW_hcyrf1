@@ -2,6 +2,8 @@ package com.example.game2048;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
@@ -25,6 +27,12 @@ public class Controller {
         @FXML
         private ToggleButton toggleBtn;
 
+
+
+
+
+
+
         @FXML
         void insertName(InputMethodEvent event) {
 
@@ -32,6 +40,10 @@ public class Controller {
 
         @FXML
         void openGameScene(ActionEvent event) {
+                Scene gameScene;
+                Group gameRoot;
+
+
 
         }
 
