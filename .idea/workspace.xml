@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="edit package name">
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="edit end game text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/mainmenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/mainmenu.fxml" afterDir="false" />
     </list>
@@ -150,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669127520897</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="edit end game text">
+      <created>1669130057813</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1669130057813</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +183,8 @@
     <MESSAGE value="fix cells bug logic" />
     <MESSAGE value="edit mainmenu.fxml" />
     <MESSAGE value="edit package name" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit package name" />
+    <MESSAGE value="edit end game text" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit end game text" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
