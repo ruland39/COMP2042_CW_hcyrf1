@@ -35,8 +35,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-
-
         Group menuRoot = new Group();
         Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
         Group accountRoot = new Group();

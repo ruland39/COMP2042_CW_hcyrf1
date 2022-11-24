@@ -135,7 +135,14 @@ public class EndGame {
         });
 
 
-
+        //Rank Button
+        Button rankButton = new Button("Rank");
+        rankButton.setPrefSize(120,50);
+        rankButton.setTextFill(Color.BLACK);
+        rankButton.setFont(font);
+        root.getChildren().add(rankButton);
+        rankButton.relocate(400,755);
+        rankButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
 
 
         //Quit Button
@@ -144,7 +151,7 @@ public class EndGame {
         quitButton.setTextFill(Color.BLACK);
         quitButton.setFont(font);
         root.getChildren().add(quitButton);
-        quitButton.relocate(400,755);
+        quitButton.relocate(400,810);
         quitButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         quitButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override

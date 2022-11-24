@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="change score text styling in gamescene">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" afterDir="false" />
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="add highscore title text">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669216429128</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add highscore title text">
+      <created>1669216669942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669216669942</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +248,8 @@
     <MESSAGE value="edit endgame: score text title, highscore text title, modified default button" />
     <MESSAGE value="change button styling using inline css" />
     <MESSAGE value="change score text styling in gamescene" />
-    <option name="LAST_COMMIT_MESSAGE" value="change score text styling in gamescene" />
+    <MESSAGE value="add highscore title text" />
+    <option name="LAST_COMMIT_MESSAGE" value="add highscore title text" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
