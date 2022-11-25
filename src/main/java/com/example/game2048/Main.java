@@ -73,7 +73,7 @@ public class Main extends Application {
 //    }
 
     public void start(Stage stage) throws IOException{
-//        WriteToFile.writeToFile("test.txt", "Saya;Keren");
+        WriteToFile.writeToFile("test.txt", "test;0");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setController(new Controller());
         Parent root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
