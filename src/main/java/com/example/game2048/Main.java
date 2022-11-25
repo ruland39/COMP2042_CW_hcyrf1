@@ -73,8 +73,11 @@ public class Main extends Application {
 //    }
 
     public void start(Stage stage) throws IOException{
-        Parent fxmlLoader =FXMLLoader.load(Main.class.getResource("main-menu.fxml"));
-        Scene scene = new Scene(fxmlLoader, 700,700);
+//        WriteToFile.writeToFile("test.txt", "Saya;Keren");
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setController(new Controller());
+        Parent root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
+        Scene scene = new Scene(root, 700,700);
         stage.setTitle("2048 Game");
         stage.setScene(scene);
         stage.show();
