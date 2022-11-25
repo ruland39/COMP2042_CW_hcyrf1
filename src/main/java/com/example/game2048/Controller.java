@@ -3,7 +3,6 @@ package com.example.game2048;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -45,8 +44,9 @@ public class Controller {
     private AnchorPane backgroundColor;
     private Color gameSceneColor = Color.rgb(189, 177, 92);
 
-    private Color[] gameScenecolorList = {Color.RED, Color.GREEN, Color.BLUE};
-    private String[] mainMenuColorList = {"-fx-background-color: RED", "-fx-background-color: GREEN", "-fx-background-color: BLUE"};
+//    private Color[] gameScenecolorList = {Color.RED, Color.GREEN, Color.BLUE};
+
+    private String[] colorList = {"ALICEBLUE", "ANTIQUEWHITE", "AZURE", "BEIGE", "BISQUE", "BURLYWOOD","BLANCHEDALMOND", "CADETBLUE", "CORAL", "CORNFLOWERBLUE", "CORNSILK", "DARKCYAN", "DARKKHAKI", "DARKSALMON", "DARKSEAGREEN", "DARKTURQOISE", "FLORALWHITE", "GAINSBORO", "GHOSTWHITE", "GOLD", "GOLDENROD", "GREENYELLOW", "HONEYDEW", "INDIANRED", "IVORY", "KHAKI", "LAVENDER", "LAVENDERBLUSH", "LEMONCHIFFON", "LIGHTBLUE", "LIGHTCORAL", "LIGHTCYAN", "LIGHTGOLDENRODYELLOW", "LIGHTGREEN", "LIGHTPINK", "LIGHTSALMON", "LIGHTSEAGREEN", "LIGHTSKYBLUE", "LIGHTSTEELBLUE", "LIGHTYELLOW", "LINEN", "MEDIUMSPRINGGREEN", "MINTCREAM", "MISTYROSE", "MOCCASIN", "NAVAJOWHITE", "OLDLACE", "PALEGREEN", "PALETURQUOISE", "PINK", "PLUM", "POWDERBLUE", "SNOW", "SPRINGGREEN", "THISTLE", "TOMATO", "TURQUOISE", "VIOLET", "WHEAT"};
 //    @FXML
 //    private Node root;
 
@@ -131,19 +131,19 @@ public class Controller {
         Stage primaryStage = (Stage) node.getScene().getWindow();
 
         int min = 0;
-        int max = 2;
+        int max = 58;
         int a = (int) (Math.random()*(max-min+1)+min);
 
 
         Scene scene = primaryStage.getScene();
         if (toggleBtn.isSelected()) {
-            gameSceneColor = gameScenecolorList[a];
-            toggleBtn.setStyle("-fx-border-color: gray; -fx-border-width: 4; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: black");
-            backgroundColor.setStyle(mainMenuColorList[a]);
+            toggleBtn.setStyle("-fx-border-color: gray; -fx-border-width: 4; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: " + colorList[a]);
+            backgroundColor.setStyle("-fx-background-color: " + colorList[a]);
+            gameSceneColor = Color.valueOf(colorList[a]);
         } else {
-            gameSceneColor = gameScenecolorList[a];
-            toggleBtn.setStyle("-fx-border-color: gray; -fx-border-width: 4; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: white");
-            backgroundColor.setStyle(mainMenuColorList[a]);
+            toggleBtn.setStyle("-fx-border-color: gray; -fx-border-width: 4; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: " + colorList[a]);
+            backgroundColor.setStyle("-fx-background-color: " + colorList[a]);
+            gameSceneColor = Color.valueOf(colorList[a]);
         }
 
     }
