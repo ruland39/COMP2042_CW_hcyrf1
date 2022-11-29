@@ -1,8 +1,13 @@
 package com.example.game2048;
 
+import javafx.animation.Interpolator;
+import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -20,11 +25,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static com.example.game2048.Main.HEIGHT;
 import static com.example.game2048.Main.WIDTH;
 
-public class Controller {
+public class Controller implements Initializable {
 
     @FXML
     private TextField nameBox;
@@ -45,10 +54,7 @@ public class Controller {
     private Color gameSceneColor = Color.rgb(189, 177, 92);
     private Color endGameSceneColor = Color.rgb(189, 177, 92);
 
-    private String[] colorList = {"ALICEBLUE", "ANTIQUEWHITE", "AZURE", "BEIGE", "BISQUE", "BURLYWOOD","BLANCHEDALMOND", "CADETBLUE", "CORAL", "CORNFLOWERBLUE", "CORNSILK", "DARKCYAN", "DARKKHAKI", "DARKSALMON", "DARKSEAGREEN", "DARKTURQUOISE", "FLORALWHITE", "GAINSBORO", "GHOSTWHITE", "GOLD", "GOLDENROD", "GREENYELLOW", "HONEYDEW", "INDIANRED", "IVORY", "KHAKI", "LAVENDER", "LAVENDERBLUSH", "LEMONCHIFFON", "LIGHTBLUE", "LIGHTCORAL", "LIGHTCYAN", "LIGHTGOLDENRODYELLOW", "LIGHTGREEN", "LIGHTPINK", "LIGHTSALMON", "LIGHTSEAGREEN", "LIGHTSKYBLUE", "LIGHTSTEELBLUE", "LIGHTYELLOW", "LINEN", "MEDIUMSPRINGGREEN", "MINTCREAM", "MISTYROSE", "MOCCASIN", "NAVAJOWHITE", "OLDLACE", "PALEGREEN", "PALETURQUOISE", "PINK", "PLUM", "POWDERBLUE", "SNOW", "SPRINGGREEN", "THISTLE", "TOMATO", "TURQUOISE", "VIOLET", "WHEAT"};
-//    @FXML
-//    private Node root;
-
+    private final String[] colorList = {"ALICEBLUE", "ANTIQUEWHITE", "AZURE", "BEIGE", "BISQUE", "BURLYWOOD","BLANCHEDALMOND", "CADETBLUE", "CORAL", "CORNFLOWERBLUE", "CORNSILK", "DARKCYAN", "DARKKHAKI", "DARKSALMON", "DARKSEAGREEN", "DARKTURQUOISE", "FLORALWHITE", "GAINSBORO", "GHOSTWHITE", "GOLD", "GOLDENROD", "GREENYELLOW", "HONEYDEW", "INDIANRED", "IVORY", "KHAKI", "LAVENDER", "LAVENDERBLUSH", "LEMONCHIFFON", "LIGHTBLUE", "LIGHTCORAL", "LIGHTCYAN", "LIGHTGOLDENRODYELLOW", "LIGHTGREEN", "LIGHTPINK", "LIGHTSALMON", "LIGHTSEAGREEN", "LIGHTSKYBLUE", "LIGHTSTEELBLUE", "LIGHTYELLOW", "LINEN", "MEDIUMSPRINGGREEN", "MINTCREAM", "MISTYROSE", "MOCCASIN", "NAVAJOWHITE", "OLDLACE", "PALEGREEN", "PALETURQUOISE", "PINK", "PLUM", "POWDERBLUE", "SNOW", "SPRINGGREEN", "THISTLE", "TOMATO", "TURQUOISE", "VIOLET", "WHEAT"};
 
     private Scene gameScene;
     private Group gameRoot;
@@ -73,6 +79,10 @@ public class Controller {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
+
+                nameBox.getText();
+                System.out.println(nameBox.getText());
+
                 Group menuRoot = new Group();
                 Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
                 Group accountRoot = new Group();
@@ -147,6 +157,38 @@ public class Controller {
             gameSceneColor = Color.valueOf(colorList[a]);
             endGameSceneColor = Color.valueOf(colorList[a]);
         }
+
+    }
+
+    // Animation for 2048 Text
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        ScaleTransition scale = new ScaleTransition();
+        scale.setNode(text2048);
+        scale.setDuration(Duration.millis(1000));
+        scale.setCycleCount(TranslateTransition.INDEFINITE);
+        scale.setInterpolator(Interpolator.LINEAR);
+        scale.setByX(1.2);
+        scale.setByY(1.2);
+        scale.setAutoReverse(true);
+        scale.play();
+
+//        RotateTransition rotate = new RotateTransition();
+//        rotate.setNode(text2048);
+//        rotate.setDuration(Duration.millis(1500));
+//        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+//        rotate.setByAngle(25.0);
+//        rotate.setInterpolator(Interpolator.LINEAR);
+//        rotate.setAutoReverse(true);
+//        rotate.play();
+
+//        TranslateTransition translate = new TranslateTransition();
+//        translate.setNode(text2048);
+//        translate.setDuration(Duration.millis(2000));
+//        translate.setCycleCount(TranslateTransition.INDEFINITE);
+//        translate.setAutoReverse(true);
+//        translate.setByX(500);
+//        translate.play();
 
     }
 }

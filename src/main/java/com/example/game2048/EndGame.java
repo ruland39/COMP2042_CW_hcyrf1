@@ -37,16 +37,16 @@ public class EndGame {
 
     public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score){
 
-        //Game Over Text
-        Text text = new Text("GAME OVER");
-        text.relocate(220,150);
+        //Name Text
+        Text text = new Text("Game Over!");
+        text.relocate(240,75);
         text.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         text.setFill(Color.BLACK);
         root.getChildren().add(text);
 
         //Score Text Title
         Text scoretexttitle = new Text("Score");
-        scoretexttitle.relocate(365,250);
+        scoretexttitle.relocate(365,150);
         scoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
         scoretexttitle.setFill(Color.BLACK);
         root.getChildren().add(scoretexttitle);
@@ -54,14 +54,14 @@ public class EndGame {
 
         //Score Text
         Text scoreText = new Text(score+"");
-        scoreText.relocate(375,340);
+        scoreText.relocate(375,240);
         scoreText.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         scoreText.setFill(Color.BLACK);
         root.getChildren().add(scoreText);
 
         //HighScore Text Title
         Text highscoretexttitle = new Text("High Score");
-        highscoretexttitle.relocate(300,450);
+        highscoretexttitle.relocate(300,350);
         highscoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
         highscoretexttitle.setFill(Color.BLACK);
         root.getChildren().add(highscoretexttitle);

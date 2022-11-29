@@ -3,6 +3,7 @@ package com.example.game2048;
 import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Font;
@@ -21,6 +22,7 @@ class GameScene {
     private Cell[][] cells = new Cell[n][n];
     private Group root;
     private long score = 0;
+    private TextField nameBox;
 
     //additions
     //Rounded Corners
@@ -280,6 +282,15 @@ class GameScene {
 
         //Font for Text
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 40);
+
+        // Name Text Title
+//        nameBox.getText();
+        Text nametext = new Text();
+        root.getChildren().add(nametext);
+//        nametext.setText(nameBox.getText());
+        nametext.setText("Ruland");
+        nametext.setFont(font);
+        nametext.relocate(720, 20);
 
         // Score Text Title
         Text scoretexttitle = new Text();

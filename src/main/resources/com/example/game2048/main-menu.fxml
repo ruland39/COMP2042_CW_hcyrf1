@@ -42,12 +42,15 @@
 <!--</AnchorPane>-->
 
 <AnchorPane fx:id="backgroundColor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #FFE15D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.game2048.Controller">
-    <Text fx:id="text2048" fill="#2d3036" layoutX="116.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2048" textAlignment="CENTER">
+    <Text fx:id="text2048" fill="#2d3036" layoutX="194.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2048" textAlignment="CENTER">
         <font>
-            <Font name="Comic Sans MS Bold" size="196.0" />
+            <Font name="Comic Sans MS Bold" size="128.0" />
         </font>
     </Text>
-    <TextField fx:id="nameBox" layoutX="226.0" layoutY="312.0" prefHeight="48.0" prefWidth="258.0" style="-fx-border-color: gray; -fx-border-width: 4; -fx-border-radius: 20; -fx-background-color: white; -fx-background-radius: 20;" />
+    <TextField fx:id="nameBox" alignment="CENTER" layoutX="226.0" layoutY="312.0" onInputMethodTextChanged="#insertName" prefHeight="48.0" prefWidth="258.0" promptText="Suq Maddiq" style="-fx-border-color: gray; -fx-border-width: 4; -fx-border-radius: 20; -fx-background-color: white; -fx-background-radius: 20;">
+      <font>
+         <Font name="Comic Sans MS" size="20.0" />
+      </font></TextField>
     <Button fx:id="playBtn" alignment="CENTER" layoutX="184.0" layoutY="530.0" mnemonicParsing="false" onAction="#openGameScene" prefHeight="109.0" prefWidth="342.0" style="-fx-background-radius: 50; -fx-border-width: 5; -fx-border-color: gray; -fx-border-radius: 50;" text="Play" textAlignment="CENTER">
         <font>
             <Font name="Comic Sans MS" size="48.0" />
