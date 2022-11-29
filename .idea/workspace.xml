@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="fix color cycle toggle">
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="implemented animation on text 2048 main menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669370555533</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="implemented animation on text 2048 main menu">
+      <created>1669716703373</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669716703373</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -281,7 +285,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initialize" />
     <MESSAGE value="invert get modify" />
     <MESSAGE value="make rectangle and root final" />
     <MESSAGE value="use enhanced switch" />
@@ -306,7 +309,8 @@
     <MESSAGE value="add WriteToFile" />
     <MESSAGE value="implemented toggle color cycle to change all background colors" />
     <MESSAGE value="fix color cycle toggle" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix color cycle toggle" />
+    <MESSAGE value="implemented animation on text 2048 main menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented animation on text 2048 main menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

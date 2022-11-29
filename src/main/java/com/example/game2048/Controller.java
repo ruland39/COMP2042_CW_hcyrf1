@@ -1,9 +1,6 @@
 package com.example.game2048;
 
-import javafx.animation.Interpolator;
-import javafx.animation.RotateTransition;
-import javafx.animation.ScaleTransition;
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -168,27 +165,30 @@ public class Controller implements Initializable {
         scale.setDuration(Duration.millis(1000));
         scale.setCycleCount(TranslateTransition.INDEFINITE);
         scale.setInterpolator(Interpolator.LINEAR);
-        scale.setByX(1.2);
-        scale.setByY(1.2);
+        scale.setByX(1.0);
+        scale.setByY(1.0);
         scale.setAutoReverse(true);
         scale.play();
 
-//        RotateTransition rotate = new RotateTransition();
-//        rotate.setNode(text2048);
-//        rotate.setDuration(Duration.millis(1500));
-//        rotate.setCycleCount(TranslateTransition.INDEFINITE);
-//        rotate.setByAngle(25.0);
-//        rotate.setInterpolator(Interpolator.LINEAR);
-//        rotate.setAutoReverse(true);
-//        rotate.play();
+        RotateTransition rotate = new RotateTransition();
+        rotate.setNode(text2048);
+        rotate.setDuration(Duration.millis(1500));
+        rotate.setCycleCount(TranslateTransition.INDEFINITE);
+        rotate.setFromAngle(-5.0);
+        rotate.setToAngle(5.0);
+        rotate.setInterpolator(Interpolator.EASE_BOTH);
+        rotate.setAutoReverse(true);
+        rotate.play();
 
-//        TranslateTransition translate = new TranslateTransition();
-//        translate.setNode(text2048);
-//        translate.setDuration(Duration.millis(2000));
-//        translate.setCycleCount(TranslateTransition.INDEFINITE);
-//        translate.setAutoReverse(true);
-//        translate.setByX(500);
-//        translate.play();
+        TranslateTransition translate = new TranslateTransition();
+        translate.setNode(text2048);
+        translate.setDuration(Duration.millis(2000));
+        translate.setCycleCount(TranslateTransition.INDEFINITE);
+        translate.setInterpolator(Interpolator.EASE_BOTH);
+        translate.setAutoReverse(true);
+        translate.setFromX(-250);
+        translate.setToX(250);
+        translate.play();
 
     }
 }
