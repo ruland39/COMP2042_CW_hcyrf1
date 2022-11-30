@@ -1,8 +1,10 @@
 package com.example.game2048;
 
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -18,6 +20,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Optional;
 
 import static com.example.game2048.Main.HEIGHT;
@@ -87,41 +90,23 @@ public class EndGame {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 root.getChildren().clear();
-
-                Group menuRoot = new Group();
-                Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
-                Group accountRoot = new Group();
-                Scene accountScene = new Scene(accountRoot, WIDTH, HEIGHT, Color.rgb(150, 20, 100, 0.2));
-                Group getAccountRoot = new Group();
-                Scene getAccountScene = new Scene(getAccountRoot, WIDTH, HEIGHT, Color.rgb(200, 20, 100, 0.2));
-                Group endgameRoot = new Group();
-                Scene endGameScene = new Scene(endgameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
-                Group rankRoot = new Group();
-                Scene rankScene = new Scene(rankRoot, WIDTH, HEIGHT, Color.rgb(250, 50, 120, 0.3));
-                BackgroundFill background_fill = new BackgroundFill(Color.rgb(120, 100, 100), CornerRadii.EMPTY, Insets.EMPTY);
-                Background background = new Background(background_fill);
+                primaryStage.close();
 
 
-                Rectangle backgroundOfMenu = new Rectangle(240, 120, Color.rgb(120, 120, 120, 0.2));
-                backgroundOfMenu.setX(WIDTH / 2 - 120);
-                backgroundOfMenu.setY(180);
-                menuRoot.getChildren().add(backgroundOfMenu);
-
-                Rectangle backgroundOfMenuForPlay = new Rectangle(240, 140, Color.rgb(120, 20, 100, 0.2));
-                backgroundOfMenuForPlay.setX(WIDTH / 2 - 120);
-                backgroundOfMenuForPlay.setY(180);
-                accountRoot.getChildren().add(backgroundOfMenuForPlay);
-
-                Group gameRoot = new Group();
-                setGameRoot(gameRoot);
-                Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
-                setGameScene(gameScene);
-                primaryStage.setScene(gameScene);
-                GameScene game = new GameScene();
-                game.game(gameScene, gameRoot, primaryStage, endGameScene, endgameRoot);
-
-                primaryStage.show();
-                
+                WriteToFile.writeToFile("test.txt", "test;0");
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setController(new Controller());
+                Parent root = null;
+                try {
+                    root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                Scene scene = new Scene(root, 700,700);
+                Stage stage = new Stage();
+                stage.setTitle("2048 Game");
+                stage.setScene(scene);
+                stage.show();
                 
             }
 

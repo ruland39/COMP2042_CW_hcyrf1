@@ -51,7 +51,7 @@
       <font>
          <Font name="Comic Sans MS" size="20.0" />
       </font></TextField>
-    <Button fx:id="playBtn" alignment="CENTER" layoutX="184.0" layoutY="530.0" mnemonicParsing="false" onAction="#openGameScene" prefHeight="109.0" prefWidth="342.0" style="-fx-background-radius: 50; -fx-border-width: 5; -fx-border-color: gray; -fx-border-radius: 50;" text="Play" textAlignment="CENTER">
+    <Button fx:id="playBtn" alignment="CENTER" layoutX="184.0" layoutY="496.0" mnemonicParsing="false" onAction="#openGameScene" prefHeight="109.0" prefWidth="342.0" style="-fx-background-radius: 50; -fx-border-width: 5; -fx-border-color: gray; -fx-border-radius: 50;" text="Play" textAlignment="CENTER">
         <font>
             <Font name="Comic Sans MS" size="48.0" />
         </font>
@@ -61,10 +61,15 @@
             <Font name="Comic Sans MS" size="24.0" />
         </font>
     </Text>
-    <Text fx:id="togglemodelabel" fill="#2d3036" layoutX="293.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cycle Color">
+    <Text fx:id="togglemodelabel" fill="#2d3036" layoutX="293.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cycle Color">
         <font>
             <Font name="Comic Sans MS" size="24.0" />
         </font>
     </Text>
-    <ToggleButton id="toggleBtn" fx:id="toggleBtn" layoutX="323.0" layoutY="431.0" mnemonicParsing="false" onAction="#toggleMode" prefHeight="64.0" prefWidth="64.0" style="-fx-border-color: gray; -fx-border-width: 4; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: white" />
+    <ToggleButton id="toggleBtn" fx:id="toggleBtn" layoutX="323.0" layoutY="414.0" mnemonicParsing="false" onAction="#toggleMode" prefHeight="64.0" prefWidth="64.0" style="-fx-border-color: gray; -fx-border-width: 4; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: white" />
+   <Button fx:id="playBtn2" alignment="CENTER" layoutX="192.0" layoutY="612.0" mnemonicParsing="false" onAction="#openGameScene2" prefHeight="64.0" prefWidth="326.0" style="-fx-background-radius: 50; -fx-border-width: 5; -fx-border-color: gray; -fx-border-radius: 50;" text="5x5" textAlignment="CENTER">
+      <font>
+         <Font name="Comic Sans MS" size="24.0" />
+      </font>
+   </Button>
 </AnchorPane>

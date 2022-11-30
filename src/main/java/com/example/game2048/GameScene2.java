@@ -13,9 +13,10 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-class GameScene {
+    //Game Scene for Interesting Game Mode: 5x5 or Blind Mode
+public class GameScene2 {
     private static int HEIGHT = 700;
-    private static int n = 4;
+    private static int n = 5;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
@@ -67,8 +68,8 @@ class GameScene {
         if (random.nextInt() % 2 == 0)
             putTwo = false;
         int xCell, yCell;
-            xCell = random.nextInt(aForBound+1);
-            yCell = random.nextInt(bForBound+1);
+        xCell = random.nextInt(aForBound+1);
+        yCell = random.nextInt(bForBound+1);
         if (putTwo) {
             text = textMaker.madeText("2", emptyCells[xCell][yCell].getX(), emptyCells[xCell][yCell].getY(), root);
             emptyCells[xCell][yCell].setTextClass(text);
@@ -318,48 +319,48 @@ class GameScene {
         randomFillNumber(1);
 
         gameScene.addEventHandler(KeyEvent.KEY_PRESSED, key ->{
-                Platform.runLater(() -> {
-                    int haveEmptyCell;
-                    //key inputs
-                    boolean b = false;
-                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
-                     || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
-                    )
-                    {
-                        b = true;
+            Platform.runLater(() -> {
+                int haveEmptyCell;
+                //key inputs
+                boolean b = false;
+                if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
+                        || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
+                )
+                {
+                    b = true;
+                }
+                else {
+                    b = false;
+                }
+
+
+                if(b == true) {
+
+                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
+                        GameScene2.this.moveDown();
+                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
+                        GameScene2.this.moveUp();
+                    } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
+                        GameScene2.this.moveLeft();
+                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
+                        GameScene2.this.moveRight();
                     }
-                    else {
-                        b = false;
+                }
+
+                scoreText.setText(score + "");
+                haveEmptyCell = GameScene2.this.haveEmptyCell();
+                if (haveEmptyCell == -1) {
+                    if (GameScene2.this.canNotMove()) {
+                        primaryStage.setScene(endGameScene);
+
+                        EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
+                        root.getChildren().clear();
+                        score = 0;
                     }
-
-
-                    if(b == true) {
-
-                        if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                            GameScene.this.moveDown();
-                        } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                            GameScene.this.moveUp();
-                        } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                            GameScene.this.moveLeft();
-                        } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                            GameScene.this.moveRight();
-                        }
-                    }
-
-                    scoreText.setText(score + "");
-                    haveEmptyCell = GameScene.this.haveEmptyCell();
-                    if (haveEmptyCell == -1) {
-                        if (GameScene.this.canNotMove()) {
-                            primaryStage.setScene(endGameScene);
-
-                            EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
-                            root.getChildren().clear();
-                            score = 0;
-                        }
-                    } else if(haveEmptyCell == 1 && b)
-                        GameScene.this.randomFillNumber(2);
-                });
+                } else if(haveEmptyCell == 1 && b)
+                    GameScene2.this.randomFillNumber(2);
             });
+        });
 
     }
 }
