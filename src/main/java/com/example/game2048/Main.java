@@ -16,6 +16,7 @@ import javafx.scene.media.MediaPlayer;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.Scanner;
 
 import static com.sun.javafx.scene.control.skin.Utils.getResource;
@@ -81,9 +82,9 @@ public class Main extends Application {
         WriteToFile.writeToFile("test.txt", "test;0");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setController(new Controller());
-        Parent root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
+        Parent root;
         try {
-            root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
+            root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("main-menu.fxml")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

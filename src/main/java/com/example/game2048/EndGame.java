@@ -102,7 +102,7 @@ public class EndGame {
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                Scene scene = new Scene(root, 900,700);
+                Scene scene = new Scene(root, 700,700);
                 Stage stage = new Stage();
                 stage.setTitle("2048 Game");
                 stage.setScene(scene);
