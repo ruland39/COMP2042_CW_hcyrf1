@@ -12,9 +12,16 @@ were not implemented,
 8. A list of Java classes that you modified from the given code base
 
 ## How to Compile and Run 2048 Game
-- one
-- two
-- three
+1. Download the Source Code ZIP File by pressing the Green Code Button
+2. After finish downloading, extract and open the file
+3. Open your IDE of choice could be IntelliJ or Eclipse 
+4. Open the project file in the IDE
+5. Please download JavaFX from [here](https://gluonhq.com/products/javafx/) Or https://gluonhq.com/products/javafx/
+6. Extract the JavaFX files and go back to your IDE
+7. Navigate through File -> Project Structure -> Library
+8. Press the plus button and add the library folder from the JavaFX files you have downloaded
+9. Build the project files and go to the main.java file
+10. You are good to go to play the game. Press Run and Have Fun!
 
 ## Javadoc Documentation
 Javadoc Documentation is available [here](https://www.youtube.com)
