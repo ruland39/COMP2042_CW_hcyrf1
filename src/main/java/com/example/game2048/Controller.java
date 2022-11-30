@@ -19,6 +19,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Stop;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -33,19 +34,12 @@ import static com.example.game2048.Main.WIDTH;
 public class Controller implements Initializable {
 
     @FXML
+    private Text text2048 , nameLabelBox;
+    @FXML
     private TextField nameBox;
 
     @FXML
-    private Text nameLabelBox;
-
-    @FXML
-    private Button playBtn;
-
-    @FXML
-    private Button playBtn2;
-
-    @FXML
-    private Text text2048;
+    private Button playBtn, playBtn2;
 
     @FXML
     private ToggleButton toggleBtn;
