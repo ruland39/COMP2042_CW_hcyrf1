@@ -10,8 +10,12 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 import static com.sun.javafx.scene.control.skin.Utils.getResource;
@@ -83,11 +87,20 @@ public class Main extends Application {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        music();
         Scene scene = new Scene(root, 700,700);
         stage.setTitle("2048 Game");
         stage.setScene(scene);
         stage.show();
 
+    }
+    // Music Function
+    MediaPlayer mediaPlayer;
+    public void music(){
+        Media h = new Media(new File("src/main/resources/com/example/game2048/bgmusic.mp3").toURI().toString());
+        mediaPlayer = new MediaPlayer(h);
+        mediaPlayer.play();
     }
 
     public static void main(String[] args) {
