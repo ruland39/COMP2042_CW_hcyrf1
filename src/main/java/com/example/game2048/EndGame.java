@@ -80,7 +80,7 @@ public class EndGame {
         retryButton.setTextFill(Color.BLACK);
         retryButton.setFont(font);
         root.getChildren().add(retryButton);
-        retryButton.relocate(400,580);
+        retryButton.relocate(400,530);
         retryButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
 
         retryButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -126,7 +126,7 @@ public class EndGame {
         rankButton.setTextFill(Color.BLACK);
         rankButton.setFont(font);
         root.getChildren().add(rankButton);
-        rankButton.relocate(400,635);
+        rankButton.relocate(400,585);
         rankButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
 
 
@@ -136,7 +136,7 @@ public class EndGame {
         quitButton.setTextFill(Color.BLACK);
         quitButton.setFont(font);
         root.getChildren().add(quitButton);
-        quitButton.relocate(400,690);
+        quitButton.relocate(400,640);
         quitButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         quitButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
