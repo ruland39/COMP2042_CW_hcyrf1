@@ -20,8 +20,9 @@ public class Main extends Application {
     //Additions
     // Slide speed animation
     public static final int SLIDE_SPEED = 20;
+
     static final int WIDTH = 900;
-    static final int HEIGHT = 900;
+    static final int HEIGHT = 700;
     private Group gameRoot = new Group();
     private Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
     private static final Scanner input= new Scanner(System.in);
@@ -77,6 +78,11 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setController(new Controller());
         Parent root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
+        try {
+            root = fxmlLoader.load(Main.class.getResource("main-menu.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         Scene scene = new Scene(root, 700,700);
         stage.setTitle("2048 Game");
         stage.setScene(scene);
