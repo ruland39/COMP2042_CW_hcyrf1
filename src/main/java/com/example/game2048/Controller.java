@@ -10,6 +10,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.InputMethodEvent;
@@ -36,10 +37,14 @@ public class Controller implements Initializable {
     @FXML
     private Text text2048 , nameLabelBox;
     @FXML
-    private TextField nameBox;
+    public TextField nameBox;
 
     @FXML
-    private Button playBtn, playBtn2;
+    private Button playBtn, playBtn2, playBtn3, playBtn4, playBtn5;
+
+    @FXML
+    private ChoiceBox<String> choiceBox;
+    private String[] level = {"2x2", "3x3", "4x4", "5x5"};
 
     @FXML
     private ToggleButton toggleBtn;
@@ -50,18 +55,16 @@ public class Controller implements Initializable {
 
     private final String[] colorList = {"ALICEBLUE", "ANTIQUEWHITE", "AZURE", "BEIGE", "BISQUE", "BURLYWOOD","BLANCHEDALMOND", "CADETBLUE", "CORAL", "CORNFLOWERBLUE", "CORNSILK", "DARKCYAN", "DARKKHAKI", "DARKSALMON", "DARKSEAGREEN", "DARKTURQUOISE", "FLORALWHITE", "GAINSBORO", "GHOSTWHITE", "GOLD", "GOLDENROD", "GREENYELLOW", "HONEYDEW", "INDIANRED", "IVORY", "KHAKI", "LAVENDER", "LAVENDERBLUSH", "LEMONCHIFFON", "LIGHTBLUE", "LIGHTCORAL", "LIGHTCYAN", "LIGHTGOLDENRODYELLOW", "LIGHTGREEN", "LIGHTPINK", "LIGHTSALMON", "LIGHTSEAGREEN", "LIGHTSKYBLUE", "LIGHTSTEELBLUE", "LIGHTYELLOW", "LINEN", "MEDIUMSPRINGGREEN", "MINTCREAM", "MISTYROSE", "MOCCASIN", "NAVAJOWHITE", "OLDLACE", "PALEGREEN", "PALETURQUOISE", "PINK", "PLUM", "POWDERBLUE", "SNOW", "SPRINGGREEN", "THISTLE", "TOMATO", "TURQUOISE", "VIOLET", "WHEAT"};
 
+
     private Scene gameScene;
     private Group gameRoot;
 
 
-    @FXML
-    void insertName(InputMethodEvent event) {
-
-    }
-
-
     //  Open Normal Game Mode
     public void openGameScene(ActionEvent actionEvent) {
+        var username = nameBox.getText();
+//        nameLabelBox.setText(username);
+
         playBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene;
             private Group gameRoot;
@@ -123,9 +126,10 @@ public class Controller implements Initializable {
             }
 
         });
+
     }
 
-    // open Game Scene 2 (Interesting Level) 5x5
+    // open Game Scene 2 (Reversible Arrow) 2x2
     public void openGameScene2(ActionEvent actionEvent) {
         playBtn2.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene2;
@@ -193,8 +197,217 @@ public class Controller implements Initializable {
         });
     }
 
+    // open Game Scene 3 (Reversible Arrow) 3x3
+
+    public void openGameScene3(ActionEvent actionEvent) {
+        playBtn3.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            private Scene gameScene3;
+            private Group gameRoot3;
+
+            final Node node3 = (Node) actionEvent.getSource();
+            final Stage primaryStage3 = (Stage) node3.getScene().getWindow();
+            private Group root3;
+
+
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+
+                nameBox.getText();
+                System.out.println(nameBox.getText());
+
+                Group menuRoot = new Group();
+                Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
+                Group accountRoot = new Group();
+                Scene accountScene = new Scene(accountRoot, WIDTH, HEIGHT, Color.rgb(150, 20, 100, 0.2));
+                Group getAccountRoot = new Group();
+                Scene getAccountScene = new Scene(getAccountRoot, WIDTH, HEIGHT, Color.rgb(200, 20, 100, 0.2));
+                Group endgameRoot = new Group();
+                Scene endGameScene = new Scene(endgameRoot, WIDTH, HEIGHT, endGameSceneColor);
+                Group rankRoot = new Group();
+                Scene rankScene = new Scene(rankRoot, WIDTH, HEIGHT, Color.rgb(250, 50, 120, 0.3));
+                BackgroundFill background_fill = new BackgroundFill(Color.rgb(120, 100, 100), CornerRadii.EMPTY, Insets.EMPTY);
+                Background background = new Background(background_fill);
+
+
+                Rectangle backgroundOfMenu = new Rectangle(240, 120, Color.rgb(120, 120, 120, 0.2));
+                backgroundOfMenu.setX(WIDTH / 2 - 120);
+                backgroundOfMenu.setY(180);
+                menuRoot.getChildren().add(backgroundOfMenu);
+
+                Rectangle backgroundOfMenuForPlay = new Rectangle(240, 140, Color.rgb(120, 20, 100, 0.2));
+                backgroundOfMenuForPlay.setX(WIDTH / 2 - 120);
+                backgroundOfMenuForPlay.setY(180);
+                accountRoot.getChildren().add(backgroundOfMenuForPlay);
+
+
+
+                Group gameRoot = new Group();
+                setGameRoot3(gameRoot);
+                Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
+                setGameScene3(gameScene);
+                primaryStage3.setScene(gameScene);
+                GameScene3 game = new GameScene3();
+                game.game(gameScene, gameRoot, primaryStage3, endGameScene, endgameRoot);
+
+                primaryStage3.show();
+            }
+
+
+
+
+            private void setGameScene3(Scene gameScene) {
+                gameScene3 = this.gameScene3;
+            }
+
+            private void setGameRoot3(Group gameRoot) {
+                gameRoot3 = this.gameRoot3;
+            }
+
+        });
+    }
+
+    // open Game Scene 4 (Reversible Arrow) 4x4
+
+    public void openGameScene4(ActionEvent actionEvent) {
+        playBtn4.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            private Scene gameScene4;
+            private Group gameRoot4;
+
+            final Node node4 = (Node) actionEvent.getSource();
+            final Stage primaryStage4 = (Stage) node4.getScene().getWindow();
+            private Group root4;
+
+
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+
+                nameBox.getText();
+                System.out.println(nameBox.getText());
+
+                Group menuRoot = new Group();
+                Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
+                Group accountRoot = new Group();
+                Scene accountScene = new Scene(accountRoot, WIDTH, HEIGHT, Color.rgb(150, 20, 100, 0.2));
+                Group getAccountRoot = new Group();
+                Scene getAccountScene = new Scene(getAccountRoot, WIDTH, HEIGHT, Color.rgb(200, 20, 100, 0.2));
+                Group endgameRoot = new Group();
+                Scene endGameScene = new Scene(endgameRoot, WIDTH, HEIGHT, endGameSceneColor);
+                Group rankRoot = new Group();
+                Scene rankScene = new Scene(rankRoot, WIDTH, HEIGHT, Color.rgb(250, 50, 120, 0.3));
+                BackgroundFill background_fill = new BackgroundFill(Color.rgb(120, 100, 100), CornerRadii.EMPTY, Insets.EMPTY);
+                Background background = new Background(background_fill);
+
+
+                Rectangle backgroundOfMenu = new Rectangle(240, 120, Color.rgb(120, 120, 120, 0.2));
+                backgroundOfMenu.setX(WIDTH / 2 - 120);
+                backgroundOfMenu.setY(180);
+                menuRoot.getChildren().add(backgroundOfMenu);
+
+                Rectangle backgroundOfMenuForPlay = new Rectangle(240, 140, Color.rgb(120, 20, 100, 0.2));
+                backgroundOfMenuForPlay.setX(WIDTH / 2 - 120);
+                backgroundOfMenuForPlay.setY(180);
+                accountRoot.getChildren().add(backgroundOfMenuForPlay);
+
+
+
+                Group gameRoot = new Group();
+                setGameRoot4(gameRoot);
+                Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
+                setGameScene4(gameScene);
+                primaryStage4.setScene(gameScene);
+                GameScene4 game = new GameScene4();
+                game.game(gameScene, gameRoot, primaryStage4, endGameScene, endgameRoot);
+
+                primaryStage4.show();
+            }
+
+
+
+
+            private void setGameScene4(Scene gameScene) {
+                gameScene4 = this.gameScene4;
+            }
+
+            private void setGameRoot4(Group gameRoot) {
+                gameRoot4 = this.gameRoot4;
+            }
+
+        });
+    }
+
+
+    // open Game Scene 5 (Reversible Arrow) 5x5
+
+    public void openGameScene5(ActionEvent actionEvent) {
+        playBtn5.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            private Scene gameScene5;
+            private Group gameRoot5;
+
+            final Node node5 = (Node) actionEvent.getSource();
+            final Stage primaryStage5 = (Stage) node5.getScene().getWindow();
+            private Group root5;
+
+
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+
+                nameBox.getText();
+                System.out.println(nameBox.getText());
+
+                Group menuRoot = new Group();
+                Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
+                Group accountRoot = new Group();
+                Scene accountScene = new Scene(accountRoot, WIDTH, HEIGHT, Color.rgb(150, 20, 100, 0.2));
+                Group getAccountRoot = new Group();
+                Scene getAccountScene = new Scene(getAccountRoot, WIDTH, HEIGHT, Color.rgb(200, 20, 100, 0.2));
+                Group endgameRoot = new Group();
+                Scene endGameScene = new Scene(endgameRoot, WIDTH, HEIGHT, endGameSceneColor);
+                Group rankRoot = new Group();
+                Scene rankScene = new Scene(rankRoot, WIDTH, HEIGHT, Color.rgb(250, 50, 120, 0.3));
+                BackgroundFill background_fill = new BackgroundFill(Color.rgb(120, 100, 100), CornerRadii.EMPTY, Insets.EMPTY);
+                Background background = new Background(background_fill);
+
+
+                Rectangle backgroundOfMenu = new Rectangle(240, 120, Color.rgb(120, 120, 120, 0.2));
+                backgroundOfMenu.setX(WIDTH / 2 - 120);
+                backgroundOfMenu.setY(180);
+                menuRoot.getChildren().add(backgroundOfMenu);
+
+                Rectangle backgroundOfMenuForPlay = new Rectangle(240, 140, Color.rgb(120, 20, 100, 0.2));
+                backgroundOfMenuForPlay.setX(WIDTH / 2 - 120);
+                backgroundOfMenuForPlay.setY(180);
+                accountRoot.getChildren().add(backgroundOfMenuForPlay);
+
+
+
+                Group gameRoot = new Group();
+                setGameRoot5(gameRoot);
+                Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
+                setGameScene5(gameScene);
+                primaryStage5.setScene(gameScene);
+                GameScene5 game = new GameScene5();
+                game.game(gameScene, gameRoot, primaryStage5, endGameScene, endgameRoot);
+
+                primaryStage5.show();
+            }
+
+
+
+
+            private void setGameScene5(Scene gameScene) {
+                gameScene5 = this.gameScene5;
+            }
+
+            private void setGameRoot5(Group gameRoot) {
+                gameRoot5 = this.gameRoot5;
+            }
+
+        });
+    }
+
+
     @FXML
-        // Color changing part
+        // Color changing part for all scenes
     public void toggleMode(ActionEvent actionEvent) {
         Node node = (Node) actionEvent.getSource();
         Stage primaryStage = (Stage) node.getScene().getWindow();
@@ -257,5 +470,24 @@ public class Controller implements Initializable {
         translate.setToX(250);
         translate.play();
 
+//        choiceBox.getItems().addAll(level);
+//        choiceBox.setOnAction(this::getLevel);
+
     }
+
+    public void getUsername(ActionEvent event){
+        nameBox.getText();
+    }
+
+//    public void getLevel(ActionEvent event){
+//        String level = choiceBox.getValue();
+////        nameLabelBox.setText(level);
+//        openGameScene2(level);
+//
+//        // to change int n for tile 3x3 4x4 5x5
+//        GameScene2 gameScene2 = new GameScene2();
+//    }
+
+
+
 }

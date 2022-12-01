@@ -16,12 +16,14 @@ import java.util.Random;
     //Game Scene for Interesting Game Mode: 5x5 or Blind Mode
 public class GameScene2 {
     private static int HEIGHT = 700;
-    private static int n = 5;
+    public static int n = 2;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
     private Cell[][] cells = new Cell[n][n];
     private Group root;
+
+    // Arrow List for randomising arrow function
     private long score = 0;
     private TextField nameBox;
 
@@ -318,6 +320,7 @@ public class GameScene2 {
         randomFillNumber(1);
         randomFillNumber(1);
 
+
         gameScene.addEventHandler(KeyEvent.KEY_PRESSED, key ->{
             Platform.runLater(() -> {
                 int haveEmptyCell;
@@ -336,14 +339,21 @@ public class GameScene2 {
 
                 if(b == true) {
 
+                // Reversible Arrow Function
+
+                // Up Arrow/W becomes moveDown
+                // Down Arrow/S becomes moveUp
+                // Left Arrow/A becomes moveRight
+                // Right Arrow/D becomes moveLeft
+
                     if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene2.this.moveDown();
-                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
                         GameScene2.this.moveUp();
+                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
+                        GameScene2.this.moveDown();
                     } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene2.this.moveLeft();
-                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
                         GameScene2.this.moveRight();
+                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
+                        GameScene2.this.moveLeft();
                     }
                 }
 
