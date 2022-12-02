@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -64,10 +65,40 @@ public class EndGame {
 
         //HighScore Text Title
         Text highscoretexttitle = new Text("High Score");
-        highscoretexttitle.relocate(300,350);
+        highscoretexttitle.relocate(300,320);
         highscoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
         highscoretexttitle.setFill(Color.BLACK);
         root.getChildren().add(highscoretexttitle);
+
+        // Highscore Text
+
+
+
+
+
+
+        // Texfield Input username LABEL
+        Text usernameLabel = new Text("Insert Name");
+        usernameLabel.relocate(380,460);
+        usernameLabel.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 24));
+        root.getChildren().add(usernameLabel);
+
+
+
+        // TextField Input username
+        TextField username = new TextField();
+        username.relocate(330,480);
+        username.setPromptText("Suq Madeeq");
+        username.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 18));
+        root.getChildren().add(username);
+
+
+
+
+
+
+
+
 
 
 

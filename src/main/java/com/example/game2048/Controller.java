@@ -43,10 +43,6 @@ public class Controller implements Initializable {
     private Button playBtn, playBtn2, playBtn3, playBtn4, playBtn5;
 
     @FXML
-    private ChoiceBox<String> choiceBox;
-    private String[] level = {"2x2", "3x3", "4x4", "5x5"};
-
-    @FXML
     private ToggleButton toggleBtn;
     @FXML
     private AnchorPane backgroundColor;
@@ -62,8 +58,6 @@ public class Controller implements Initializable {
 
     //  Open Normal Game Mode
     public void openGameScene(ActionEvent actionEvent) {
-        var username = nameBox.getText();
-//        nameLabelBox.setText(username);
 
         playBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene;
@@ -77,8 +71,6 @@ public class Controller implements Initializable {
             @Override
             public void handle(MouseEvent mouseEvent) {
 
-                nameBox.getText();
-                System.out.println(nameBox.getText());
 
                 Group menuRoot = new Group();
                 Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
@@ -142,9 +134,6 @@ public class Controller implements Initializable {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-
-                nameBox.getText();
-                System.out.println(nameBox.getText());
 
                 Group menuRoot = new Group();
                 Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
@@ -470,24 +459,11 @@ public class Controller implements Initializable {
         translate.setToX(250);
         translate.play();
 
-//        choiceBox.getItems().addAll(level);
-//        choiceBox.setOnAction(this::getLevel);
-
     }
 
     public void getUsername(ActionEvent event){
         nameBox.getText();
     }
-
-//    public void getLevel(ActionEvent event){
-//        String level = choiceBox.getValue();
-////        nameLabelBox.setText(level);
-//        openGameScene2(level);
-//
-//        // to change int n for tile 3x3 4x4 5x5
-//        GameScene2 gameScene2 = new GameScene2();
-//    }
-
 
 
 }

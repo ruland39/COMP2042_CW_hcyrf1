@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="fix canvas size again and modified FXML Main loadup">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene5.java" afterDir="false" />
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="added gamescene2,3,4,5 for reversible arrow mode and make opengamescene2,3,4,5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -338,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669786040118</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added gamescene2,3,4,5 for reversible arrow mode and make opengamescene2,3,4,5">
+      <created>1669887010313</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1669887010313</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,7 +356,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="edit package name" />
     <MESSAGE value="edit end game text" />
     <MESSAGE value="change main menu appearance and change game over background color" />
     <MESSAGE value="implemented retry button" />
@@ -379,7 +380,8 @@
     <MESSAGE value="FXML code cleanup" />
     <MESSAGE value="fix canas size again" />
     <MESSAGE value="fix canvas size again and modified FXML Main loadup" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix canvas size again and modified FXML Main loadup" />
+    <MESSAGE value="added gamescene2,3,4,5 for reversible arrow mode and make opengamescene2,3,4,5" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gamescene2,3,4,5 for reversible arrow mode and make opengamescene2,3,4,5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
