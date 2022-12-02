@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -79,7 +80,7 @@ public class Main extends Application {
 //    }
 
     public void start(Stage stage) throws IOException{
-        WriteToFile.writeToFile("test.txt", "test;0");
+        WriteToFile.writeToFile("rank.txt", "ruland;39");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setController(new Controller());
         Parent root;
@@ -101,6 +102,13 @@ public class Main extends Application {
     public void music(){
         Media h = new Media(new File("src/main/resources/com/example/game2048/bgmusic.mp3").toURI().toString());
         mediaPlayer = new MediaPlayer(h);
+        mediaPlayer.setOnEndOfMedia(new Runnable() {
+            @Override
+            public void run() {
+                mediaPlayer.seek(Duration.ZERO);
+            }
+        });
+
         mediaPlayer.play();
     }
 

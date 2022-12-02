@@ -35,7 +35,7 @@ import static com.example.game2048.Main.WIDTH;
 public class Controller implements Initializable {
 
     @FXML
-    private Text text2048 , nameLabelBox;
+    private Text text2048, nameLabelBox;
     @FXML
     public TextField nameBox;
 
@@ -49,7 +49,7 @@ public class Controller implements Initializable {
     private Color gameSceneColor = Color.rgb(189, 177, 92);
     private Color endGameSceneColor = Color.rgb(189, 177, 92);
 
-    private final String[] colorList = {"ALICEBLUE", "ANTIQUEWHITE", "AZURE", "BEIGE", "BISQUE", "BURLYWOOD","BLANCHEDALMOND", "CADETBLUE", "CORAL", "CORNFLOWERBLUE", "CORNSILK", "DARKCYAN", "DARKKHAKI", "DARKSALMON", "DARKSEAGREEN", "DARKTURQUOISE", "FLORALWHITE", "GAINSBORO", "GHOSTWHITE", "GOLD", "GOLDENROD", "GREENYELLOW", "HONEYDEW", "INDIANRED", "IVORY", "KHAKI", "LAVENDER", "LAVENDERBLUSH", "LEMONCHIFFON", "LIGHTBLUE", "LIGHTCORAL", "LIGHTCYAN", "LIGHTGOLDENRODYELLOW", "LIGHTGREEN", "LIGHTPINK", "LIGHTSALMON", "LIGHTSEAGREEN", "LIGHTSKYBLUE", "LIGHTSTEELBLUE", "LIGHTYELLOW", "LINEN", "MEDIUMSPRINGGREEN", "MINTCREAM", "MISTYROSE", "MOCCASIN", "NAVAJOWHITE", "OLDLACE", "PALEGREEN", "PALETURQUOISE", "PINK", "PLUM", "POWDERBLUE", "SNOW", "SPRINGGREEN", "THISTLE", "TOMATO", "TURQUOISE", "VIOLET", "WHEAT"};
+    private final String[] colorList = {"ALICEBLUE", "ANTIQUEWHITE", "AZURE", "BEIGE", "BISQUE", "BURLYWOOD", "BLANCHEDALMOND", "CADETBLUE", "CORAL", "CORNFLOWERBLUE", "CORNSILK", "DARKCYAN", "DARKKHAKI", "DARKSALMON", "DARKSEAGREEN", "DARKTURQUOISE", "FLORALWHITE", "GAINSBORO", "GHOSTWHITE", "GOLD", "GOLDENROD", "GREENYELLOW", "HONEYDEW", "INDIANRED", "IVORY", "KHAKI", "LAVENDER", "LAVENDERBLUSH", "LEMONCHIFFON", "LIGHTBLUE", "LIGHTCORAL", "LIGHTCYAN", "LIGHTGOLDENRODYELLOW", "LIGHTGREEN", "LIGHTPINK", "LIGHTSALMON", "LIGHTSEAGREEN", "LIGHTSKYBLUE", "LIGHTSTEELBLUE", "LIGHTYELLOW", "LINEN", "MEDIUMSPRINGGREEN", "MINTCREAM", "MISTYROSE", "MOCCASIN", "NAVAJOWHITE", "OLDLACE", "PALEGREEN", "PALETURQUOISE", "PINK", "PLUM", "POWDERBLUE", "SNOW", "SPRINGGREEN", "THISTLE", "TOMATO", "TURQUOISE", "VIOLET", "WHEAT"};
 
 
     private Scene gameScene;
@@ -95,7 +95,6 @@ public class Controller implements Initializable {
                 backgroundOfMenuForPlay.setX(WIDTH / 2 - 120);
                 backgroundOfMenuForPlay.setY(180);
                 accountRoot.getChildren().add(backgroundOfMenuForPlay);
-
 
 
                 Group gameRoot = new Group();
@@ -160,7 +159,6 @@ public class Controller implements Initializable {
                 accountRoot.getChildren().add(backgroundOfMenuForPlay);
 
 
-
                 Group gameRoot = new Group();
                 setGameRoot2(gameRoot);
                 Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
@@ -171,8 +169,6 @@ public class Controller implements Initializable {
 
                 primaryStage2.show();
             }
-
-
 
 
             private void setGameScene2(Scene gameScene) {
@@ -226,7 +222,6 @@ public class Controller implements Initializable {
                 accountRoot.getChildren().add(backgroundOfMenuForPlay);
 
 
-
                 Group gameRoot = new Group();
                 setGameRoot3(gameRoot);
                 Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
@@ -237,8 +232,6 @@ public class Controller implements Initializable {
 
                 primaryStage3.show();
             }
-
-
 
 
             private void setGameScene3(Scene gameScene) {
@@ -292,7 +285,6 @@ public class Controller implements Initializable {
                 accountRoot.getChildren().add(backgroundOfMenuForPlay);
 
 
-
                 Group gameRoot = new Group();
                 setGameRoot4(gameRoot);
                 Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
@@ -303,8 +295,6 @@ public class Controller implements Initializable {
 
                 primaryStage4.show();
             }
-
-
 
 
             private void setGameScene4(Scene gameScene) {
@@ -359,7 +349,6 @@ public class Controller implements Initializable {
                 accountRoot.getChildren().add(backgroundOfMenuForPlay);
 
 
-
                 Group gameRoot = new Group();
                 setGameRoot5(gameRoot);
                 Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, gameSceneColor);
@@ -370,8 +359,6 @@ public class Controller implements Initializable {
 
                 primaryStage5.show();
             }
-
-
 
 
             private void setGameScene5(Scene gameScene) {
@@ -387,15 +374,15 @@ public class Controller implements Initializable {
 
 
     @FXML
-        // Color changing part for all scenes
+    // Color changing part for all scenes
     public void toggleMode(ActionEvent actionEvent) {
         Node node = (Node) actionEvent.getSource();
         Stage primaryStage = (Stage) node.getScene().getWindow();
 
         // Random Number Generator to decide the order on the array list
         int min = 0;
-        int max = colorList.length-1;
-        int a = (int) (Math.random()*(max-min+1)+min);
+        int max = colorList.length - 1;
+        int a = (int) (Math.random() * (max - min + 1) + min);
 
         System.out.println(colorList[a]);
 
@@ -451,10 +438,4 @@ public class Controller implements Initializable {
         translate.play();
 
     }
-
-    public void getUsername(ActionEvent event){
-        nameBox.getText();
-    }
-
-
 }

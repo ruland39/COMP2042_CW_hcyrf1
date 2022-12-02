@@ -3,6 +3,7 @@ package com.example.game2048;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,6 +20,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -91,17 +93,8 @@ public class EndGame {
         username.setPromptText("Suq Madeeq");
         username.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         username.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 18));
+        username.setAlignment(Pos.CENTER);
         root.getChildren().add(username);
-
-
-
-
-
-
-
-
-
-
 
         //Font for Button
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 20);
