@@ -105,6 +105,9 @@ public class EndGame {
                 String message = username.getText().toString() + ";" + score + "\n";
 
                 WriteToFile.writeToFile("rank.txt", message);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Name and Highscore have been successfully saved!");
+                alert.show();
             }
         });
 
@@ -157,6 +160,7 @@ public class EndGame {
         tableView.setMaxWidth(500);
         tableView.setMaxHeight(200);
         tableView.relocate(320,275);
+        tableView.setStyle("-fx-background-color: gray; -fx-background-radius: 20; -fx-border-width: 5; -fx-border-color: gray; -fx-border-radius: 20; -fx-border-insets: 10;");
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         TableColumn tableColumn = new TableColumn("Username");
