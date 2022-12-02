@@ -28,13 +28,34 @@ Javadoc Documentation is available [here](https://www.youtube.com)
 
 ## Design Diagram
 Design Diagram PDF is available [here](https://www.youtube.com)
+
 ## List of Features
-- Controls using WASD
-- Play Again/Retry Button at EndGame
-- HighScore Counter
-- Permanent HighScore List with Names/Accounts
-- Toggle Light/Dark Mode
-- New Game Mode: Blind 2048 Game
+- Implemented Animation (Translation, Rotation, Scale)
+- Options to play the game in 2x2, 3x3, 4x4, 5x5 Grid
+- Interesting Game Mode: Reversible Arrow Mode (⬆️ = Down, ⬇️ = Up, ⬅️ = Right, ➡️ = Left)
+- Additional controls using WASD
+- Applied Background Music that loops infinitely
+- Added Color Cycle Toggle Button that changes all the background colour to a pre-selected interesting colours
+- Making window screen size adjustable (square in main menu but extends to rectangle in gameScene)
+- Used custom style for text, buttons, and others using CSS
+- Addition of Retry Button at EndGame to bring back to Main Menu
+- Permanent HighScore List Table View
+
+## Additional Classes
+- GameScene2
+- GameScene3
+- GameScene4
+- GameScene5
+- HighScore
+- WriteToFile
+
+## Modified Classes
+- Account
+- Cell
+- Controller
+- Endgame
+- GameScene
+- Main
 
 ## Report
 This software maintenance project is complicated.
