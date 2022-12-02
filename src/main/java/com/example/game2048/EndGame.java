@@ -46,14 +46,14 @@ public class EndGame {
 
         //Name Text
         Text text = new Text("Game Over!");
-        text.relocate(240,50);
+        text.relocate(240,75);
         text.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         text.setFill(Color.BLACK);
         root.getChildren().add(text);
 
         //Score Text Title
         Text scoretexttitle = new Text("Score");
-        scoretexttitle.relocate(365,100);
+        scoretexttitle.relocate(365,150);
         scoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
         scoretexttitle.setFill(Color.BLACK);
         root.getChildren().add(scoretexttitle);
@@ -61,30 +61,21 @@ public class EndGame {
 
         //Score Text
         Text scoreText = new Text(score+"");
-        scoreText.relocate(375,150);
+        scoreText.relocate(375, 230);
         scoreText.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         scoreText.setFill(Color.BLACK);
         root.getChildren().add(scoreText);
 
 
-
-
-
-
-
-
-
-
-
         // Texfield Input username LABEL
         Text usernameLabel = new Text("Insert Name");
-        usernameLabel.relocate(380,460);
+        usernameLabel.relocate(380,500);
         usernameLabel.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 24));
         root.getChildren().add(usernameLabel);
 
         // TextField Input username
         TextField username = new TextField();
-        username.relocate(330,480);
+        username.relocate(300,520);
         username.setPromptText("Suq Madeeq");
         username.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         username.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 18));
@@ -96,14 +87,14 @@ public class EndGame {
 
         //Save username Button
         Button saveButton = new Button("Save");
-        saveButton.setPrefSize(120,50);
         saveButton.setTextFill(Color.BLACK);
         saveButton.setFont(font);
-        root.getChildren().add(saveButton);
-        saveButton.relocate(580,475);
+        saveButton.relocate(555,517);
         saveButton.setMaxWidth(80.0);
-        saveButton.setMaxHeight(80.0);
-        saveButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 100;");
+        saveButton.setMaxHeight(10.0);
+        saveButton.setStyle("-fx-background-radius: 100; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 100;");
+
+        root.getChildren().add(saveButton);
 
         saveButton.setOnMouseClicked(mouseEvent -> {
             if(username.getText().toString().length() == 0){
@@ -123,7 +114,7 @@ public class EndGame {
         retryButton.setTextFill(Color.BLACK);
         retryButton.setFont(font);
         root.getChildren().add(retryButton);
-        retryButton.relocate(400,570);
+        retryButton.relocate(400,585);
         retryButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
 
         retryButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -163,8 +154,9 @@ public class EndGame {
 
 
         TableView tableView = new TableView<>();
-        tableView.setMaxWidth(100);
-        tableView.relocate(650,60);
+        tableView.setMaxWidth(500);
+        tableView.setMaxHeight(200);
+        tableView.relocate(320,275);
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         TableColumn tableColumn = new TableColumn("Username");

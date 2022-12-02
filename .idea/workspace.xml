@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="add highscore rank list">
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="remove rank button and rearrange retry and quit button">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -379,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669976185459</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="remove rank button and rearrange retry and quit button">
+      <created>1669976310037</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1669976310037</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -395,7 +403,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add highscore title text" />
     <MESSAGE value="add rank button in endgame" />
     <MESSAGE value="main menu show up" />
     <MESSAGE value="implemented play button and toggle color background" />
@@ -420,7 +427,8 @@
     <MESSAGE value="make music always repeat" />
     <MESSAGE value="save username and score to rank text file" />
     <MESSAGE value="add highscore rank list" />
-    <option name="LAST_COMMIT_MESSAGE" value="add highscore rank list" />
+    <MESSAGE value="remove rank button and rearrange retry and quit button" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove rank button and rearrange retry and quit button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
