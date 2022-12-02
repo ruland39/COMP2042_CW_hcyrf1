@@ -7,10 +7,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -23,7 +21,10 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 
 import static com.example.game2048.Main.HEIGHT;
@@ -45,14 +46,14 @@ public class EndGame {
 
         //Name Text
         Text text = new Text("Game Over!");
-        text.relocate(240,75);
+        text.relocate(240,50);
         text.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         text.setFill(Color.BLACK);
         root.getChildren().add(text);
 
         //Score Text Title
         Text scoretexttitle = new Text("Score");
-        scoretexttitle.relocate(365,150);
+        scoretexttitle.relocate(365,100);
         scoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
         scoretexttitle.setFill(Color.BLACK);
         root.getChildren().add(scoretexttitle);
@@ -60,19 +61,15 @@ public class EndGame {
 
         //Score Text
         Text scoreText = new Text(score+"");
-        scoreText.relocate(375,240);
+        scoreText.relocate(375,150);
         scoreText.setFont(Font.font("Comic Sans MS", FontWeight.MEDIUM,80));
         scoreText.setFill(Color.BLACK);
         root.getChildren().add(scoreText);
 
-        //HighScore Text Title
-        Text highscoretexttitle = new Text("High Score");
-        highscoretexttitle.relocate(300,320);
-        highscoretexttitle.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT,60));
-        highscoretexttitle.setFill(Color.BLACK);
-        root.getChildren().add(highscoretexttitle);
 
-        // Highscore Text
+
+
+
 
 
 
@@ -84,8 +81,6 @@ public class EndGame {
         usernameLabel.relocate(380,460);
         usernameLabel.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 24));
         root.getChildren().add(usernameLabel);
-
-
 
         // TextField Input username
         TextField username = new TextField();
@@ -106,7 +101,8 @@ public class EndGame {
         saveButton.setFont(font);
         root.getChildren().add(saveButton);
         saveButton.relocate(580,475);
-        saveButton.setPrefWidth(80.0);
+        saveButton.setMaxWidth(80.0);
+        saveButton.setMaxHeight(80.0);
         saveButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 100;");
 
         saveButton.setOnMouseClicked(mouseEvent -> {
@@ -140,7 +136,6 @@ public class EndGame {
                 primaryStage.close();
 
 
-                WriteToFile.writeToFile("test.txt", "test;0");
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setController(new Controller());
                 Parent root = null;
@@ -176,13 +171,42 @@ public class EndGame {
         rankButton.relocate(400,585);
         rankButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
 
+        rankButton.setOnMouseClicked(mouseEvent -> {
+
+
+
+
+
+        });
+
+        TableView tableView = new TableView<>();
+        tableView.setMaxWidth(100);
+        tableView.relocate(650,60);
+        tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        TableColumn tableColumn = new TableColumn("Username");
+        tableColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
+        TableColumn tableColumn1 = new TableColumn("Highscore");
+        tableColumn1.setCellValueFactory(new PropertyValueFactory<>("highScore"));
+
+        tableView.getColumns().addAll(tableColumn, tableColumn1);
+
+        try {
+            List<HighScore> highScoreList = WriteToFile.getAllScore("rank.txt");
+            highScoreList.sort(Comparator.comparing(HighScore::getHighScore, Comparator.reverseOrder()));
+            tableView.getItems().addAll(highScoreList);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
 
         //Quit Button
         Button quitButton = new Button("Quit");
         quitButton.setPrefSize(120,50);
         quitButton.setTextFill(Color.BLACK);
         quitButton.setFont(font);
-        root.getChildren().add(quitButton);
+        root.getChildren().addAll(quitButton, tableView);
         quitButton.relocate(400,640);
         quitButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         quitButton.setOnMouseClicked(new EventHandler<MouseEvent>() {

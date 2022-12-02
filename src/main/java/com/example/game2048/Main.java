@@ -80,7 +80,6 @@ public class Main extends Application {
 //    }
 
     public void start(Stage stage) throws IOException{
-        WriteToFile.writeToFile("rank.txt", "ruland;39");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setController(new Controller());
         Parent root;

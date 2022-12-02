@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="make music always repeat">
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="save username and score to rank text file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/HighScore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" afterDir="false" />
@@ -368,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669973280552</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="save username and score to rank text file">
+      <created>1669974510894</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1669974510894</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,7 +392,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="change button styling using inline css" />
     <MESSAGE value="change score text styling in gamescene" />
     <MESSAGE value="add highscore title text" />
     <MESSAGE value="add rank button in endgame" />
@@ -409,7 +416,8 @@
     <MESSAGE value="finished styling textfield and its label" />
     <MESSAGE value="remove highscore from gamescene" />
     <MESSAGE value="make music always repeat" />
-    <option name="LAST_COMMIT_MESSAGE" value="make music always repeat" />
+    <MESSAGE value="save username and score to rank text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="save username and score to rank text file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

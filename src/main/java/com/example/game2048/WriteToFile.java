@@ -53,16 +53,17 @@ public class WriteToFile {
         allUserAccount.add(text);
     }
 
-    public static List<String> getAllScore(String name) throws FileNotFoundException {
+    public static List<HighScore> getAllScore(String name) throws FileNotFoundException {
         File myObj = new File(name);
 
-        List<String> allUserAccount = new ArrayList<>();
+        List<HighScore> allUserAccount = new ArrayList<>();
 
         Scanner myReader = new Scanner(myObj);
 
         while (myReader.hasNextLine()){
             String data = myReader.nextLine();
-            allUserAccount.add(data);
+            String details[] = data.split(";");
+            allUserAccount.add(new HighScore(details[0], details[1]));
 
         }
 
