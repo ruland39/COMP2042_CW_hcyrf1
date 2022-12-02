@@ -123,7 +123,7 @@ public class EndGame {
         retryButton.setTextFill(Color.BLACK);
         retryButton.setFont(font);
         root.getChildren().add(retryButton);
-        retryButton.relocate(400,530);
+        retryButton.relocate(400,570);
         retryButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
 
         retryButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -161,23 +161,6 @@ public class EndGame {
             }
         });
 
-
-        //Rank Button
-        Button rankButton = new Button("Rank");
-        rankButton.setPrefSize(120,50);
-        rankButton.setTextFill(Color.BLACK);
-        rankButton.setFont(font);
-        root.getChildren().add(rankButton);
-        rankButton.relocate(400,585);
-        rankButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
-
-        rankButton.setOnMouseClicked(mouseEvent -> {
-
-
-
-
-
-        });
 
         TableView tableView = new TableView<>();
         tableView.setMaxWidth(100);
