@@ -99,6 +99,28 @@ public class EndGame {
         //Font for Button
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 20);
 
+        //Save username Button
+        Button saveButton = new Button("Save");
+        saveButton.setPrefSize(120,50);
+        saveButton.setTextFill(Color.BLACK);
+        saveButton.setFont(font);
+        root.getChildren().add(saveButton);
+        saveButton.relocate(580,475);
+        saveButton.setPrefWidth(80.0);
+        saveButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 100;");
+
+        saveButton.setOnMouseClicked(mouseEvent -> {
+            if(username.getText().toString().length() == 0){
+                Alert alert = new Alert(Alert.AlertType.WARNING,"Please Enter Your Name!");
+                alert.show();
+            }
+            else{
+                String message = username.getText().toString() + ";" + score + "\n";
+
+                WriteToFile.writeToFile("rank.txt", message);
+            }
+        });
+
         //Retry/Play Again Button
         Button retryButton = new Button("Retry");
         retryButton.setPrefSize(120,50);

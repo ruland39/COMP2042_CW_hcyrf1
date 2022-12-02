@@ -13,10 +13,18 @@ public class WriteToFile {
     public static void writeToFile(String name, String text){
         try {
             File myObj = new File(name);
+            if(!myObj.exists()){
+                FileWriter fileWriter = new FileWriter(name, false);
+                fileWriter.write(text);
+                fileWriter.close();
+            }
+            else{
+                FileWriter fileWriter = new FileWriter(name, true);
+                fileWriter.append(text);
+                fileWriter.close();
 
-            FileWriter fileWriter = new FileWriter(name);
-            fileWriter.write(text);
-            fileWriter.close();
+            }
+
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
