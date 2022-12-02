@@ -201,9 +201,6 @@ public class Controller implements Initializable {
             @Override
             public void handle(MouseEvent mouseEvent) {
 
-                nameBox.getText();
-                System.out.println(nameBox.getText());
-
                 Group menuRoot = new Group();
                 Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
                 Group accountRoot = new Group();
@@ -269,9 +266,6 @@ public class Controller implements Initializable {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-
-                nameBox.getText();
-                System.out.println(nameBox.getText());
 
                 Group menuRoot = new Group();
                 Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);
@@ -339,9 +333,6 @@ public class Controller implements Initializable {
 
             @Override
             public void handle(MouseEvent mouseEvent) {
-
-                nameBox.getText();
-                System.out.println(nameBox.getText());
 
                 Group menuRoot = new Group();
                 Scene menuScene = new Scene(menuRoot, WIDTH, HEIGHT);

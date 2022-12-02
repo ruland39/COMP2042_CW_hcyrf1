@@ -89,6 +89,7 @@ public class EndGame {
         TextField username = new TextField();
         username.relocate(330,480);
         username.setPromptText("Suq Madeeq");
+        username.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         username.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 18));
         root.getChildren().add(username);
 
