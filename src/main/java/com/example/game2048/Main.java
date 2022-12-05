@@ -1,34 +1,29 @@
 package com.example.game2048;
 
+import com.example.game2048.controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Scanner;
-
-import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 public class Main extends Application {
     //Additions
     // Slide speed animation
     public static final int SLIDE_SPEED = 20;
 
-    static final int WIDTH = 900;
-    static final int HEIGHT = 700;
+    public static final int WIDTH = 900;
+    public static final int HEIGHT = 700;
     private Group gameRoot = new Group();
     private Scene gameScene = new Scene(gameRoot, WIDTH, HEIGHT, Color.rgb(189, 177, 92));
     private static final Scanner input= new Scanner(System.in);

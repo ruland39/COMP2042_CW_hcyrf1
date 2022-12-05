@@ -1,5 +1,6 @@
-package com.example.game2048;
+package com.example.game2048.controller;
 
+import com.example.game2048.*;
 import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
