@@ -1,6 +1,7 @@
 package com.example.game2048;
 
 import com.example.game2048.controller.Controller;
+import com.example.game2048.utility.WriteToFile;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -68,7 +69,7 @@ public class EndGame {
         // TextField Input username
         TextField username = new TextField();
         username.relocate(300,520);
-        username.setPromptText("Suq Madeeq");
+        username.setPromptText("Username");
         username.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         username.setFont(Font.font("Comic Sans MS", FontWeight.LIGHT, 18));
         username.setAlignment(Pos.CENTER);

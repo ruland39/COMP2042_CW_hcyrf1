@@ -12,4 +12,6 @@ module com.example.demo {
     exports com.example.game2048;
     exports com.example.game2048.controller;
     opens com.example.game2048.controller to javafx.fxml;
+    exports com.example.game2048.utility;
+    opens com.example.game2048.utility to javafx.fxml;
 }
