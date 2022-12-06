@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/EndGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/GameScene5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" afterDir="false" />
+    <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="finish modifying endgame scene">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
