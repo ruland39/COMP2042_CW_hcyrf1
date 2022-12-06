@@ -4,6 +4,7 @@ import com.example.game2048.GameScene;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 public class TextMaker {
@@ -20,11 +21,15 @@ public class TextMaker {
     }
 
     public Text madeText(String input, double xCell, double yCell, Group root) {
+
         double length = GameScene.getLENGTH();
         double fontSize = (3 * length) / 7.0;
+
+        Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, fontSize);
+
         Text text = new Text(input);
-        text.setFont(Font.font(fontSize));
-        text.relocate((xCell + (1.2)* length / 7.0), (yCell + 2 * length / 7.0));
+        text.setFont(font);
+        text.relocate((xCell + (1.2)* length / 10.0), (yCell + 2 * length / 5.0));
         text.setFill(Color.WHITE);
 
         return text;

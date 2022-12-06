@@ -99,7 +99,6 @@ public class Main extends Application {
         mediaPlayer.setOnEndOfMedia(new Runnable() {
             @Override
             public void run() {
-//                System.out.println("TestRepeat");
                 mediaPlayer.seek(Duration.ZERO);
             }
         });
