@@ -1,6 +1,6 @@
 package com.example.game2048.utility;
 
-import com.example.game2048.HighScore;
+import com.example.game2048.model.HighScore;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,6 +1,7 @@
 package com.example.game2048;
 
 import com.example.game2048.controller.Controller;
+import com.example.game2048.model.HighScore;
 import com.example.game2048.utility.WriteToFile;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -11,7 +12,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;

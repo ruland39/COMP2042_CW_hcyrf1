@@ -1,5 +1,6 @@
 package com.example.game2048;
 
+import com.example.game2048.model.Cell;
 import com.example.game2048.utility.TextMaker;
 import javafx.application.Platform;
 import javafx.scene.Group;

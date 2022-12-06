@@ -1,4 +1,4 @@
-package com.example.game2048;
+package com.example.game2048.model;
 
 public class HighScore {
     private String username;
