@@ -30,6 +30,7 @@ Javadoc Documentation is available [here](https://www.youtube.com)
 Design Diagram PDF is available [here](https://www.youtube.com)
 
 ## List of Features
+### List of Features that are implemented and working properly
 - Implemented Animation (Translation, Rotation, Scale)
 - Options to play the game in 2x2, 3x3, 4x4, 5x5 Grid
 - Interesting Game Mode: Reversible Arrow Mode (⬆️ = Down, ⬇️ = Up, ⬅️ = Right, ➡️ = Left)
@@ -40,6 +41,14 @@ Design Diagram PDF is available [here](https://www.youtube.com)
 - Used custom style for text, buttons, and others using CSS
 - Addition of Retry Button at EndGame to bring back to Main Menu
 - Permanent HighScore List Table View
+
+### List of Features that are implemented but not working properly
+- None
+
+### List of Features that are not implemented
+- ComboBox/ChoiceBox containing all the possible combination for the cell grid e.g.2x2,3x3,4x4,5x5 and only two play buttons (One for normal game mode and One for Reversible Arrow Mode)
+- Animation using transition for changing scenes
+- Animation for sliding cells
 
 ## Additional Classes
 - GameScene2
@@ -56,6 +65,7 @@ Design Diagram PDF is available [here](https://www.youtube.com)
 - Endgame
 - GameScene
 - Main
+- TextMaker
 
 ## Report
-This software maintenance project is complicated.
+This software maintenance project provides understanding on how to refactoring is an essential skill a programmer/developer needs to fix bugs and extending the feature that certain project already have without starting to build the project from scratch. It also teaches us code smell and how to make a particular code to be more readable as well as using the proper naming convention in this case the Camel Case. This project gives insight on library to use in a project, in this case we are using JavaFX. This is also a good learning curve on how to build an interactive GUI that people will actually appreciate on a program. Moreover, we are also using Junit for testing methods and verifying it. The use of git and github in this project is really useful in the future so we are familiar on the environment of pushing code to github. The most challenging part of this project is working with JavaFX since this is our first time using it. However, by reading docs as well as watching tutorials on it online, I managed to get everything working and started to explore on what JavaFX has to offer. By changing the setStyle properties and using CSS, the interface and design can be altered as to our preference which I really enjoy thinkering. This project is not only important for our modules it gives us an insight on the working environment we will be having in the future.
