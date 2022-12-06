@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Border;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -153,7 +154,7 @@ public class EndGame {
         tableView.setMaxWidth(500);
         tableView.setMaxHeight(200);
         tableView.relocate(320,275);
-        tableView.setStyle("-fx-background-color: gray; -fx-background-radius: 20; -fx-border-width: 5; -fx-border-color: gray; -fx-border-radius: 20; -fx-border-insets: 10;");
+        tableView.setStyle("-fx-background-color: rgba(224, 226, 226, 0.5); -fx-background-radius: 20; -fx-border-width: 10; -fx-border-color: rgba(224, 226, 226, 0.5); -fx-border-radius: 10; -fx-border-insets: 10");
         tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         TableColumn tableColumn = new TableColumn("Username");
