@@ -46,7 +46,7 @@ Design Diagram PDF is available [here](https://www.youtube.com)
 - None
 
 ### List of Features that are not implemented
-- ComboBox/ChoiceBox containing all the possible combination for the cell grid e.g.2x2,3x3,4x4,5x5 and only two play buttons (One for normal game mode and One for Reversible Arrow Mode)
+- ComboBox/ChoiceBox containing all the possible combination for the cell grid e.g.2x2, 3x3, 4x4, 5x5 and only two Play buttons (One for Normal game mode and One for Reversible Arrow Mode)
 - Animation using transition for changing scenes
 - Animation for sliding cells
 
