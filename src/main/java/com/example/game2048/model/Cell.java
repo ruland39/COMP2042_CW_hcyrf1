@@ -1,5 +1,7 @@
 package com.example.game2048.model;
-
+/**
+ * @author Ruland Muhammad Furqan-modified
+ */
 
 import com.example.game2048.utility.TextMaker;
 import javafx.scene.Group;
@@ -13,14 +15,29 @@ public class Cell {
     private Text textClass;
     private boolean modify = false;
 
+    /**
+     * This is the setter for the modify
+     * @param modify
+     */
     public void setModify(boolean modify) {
         this.modify = modify;
     }
 
+    /**
+     * This is the getter for the modify
+     * @return
+     */
     public boolean getModify() {
         return !modify;
     }
 
+    /**
+     * This is the function for making the cell into the gameScene. It is making the cell using a rectangle.
+     * @param x
+     * @param y
+     * @param scale
+     * @param root
+     */
     public Cell(double x, double y, double scale, Group root) {
         rectangle = new Rectangle();
         rectangle.setX(x);
@@ -35,10 +52,18 @@ public class Cell {
         root.getChildren().add(rectangle);
     }
 
+    /**
+     * This is the setter for the TextClass
+     * @param textClass
+     */
     public void setTextClass(Text textClass) {
         this.textClass = textClass;
     }
 
+    /**
+     * This is the function for changing the cell and its number.
+     * @param cell
+     */
     public void changeCell(Cell cell) {
         TextMaker.changeTwoText(textClass, cell.getTextClass());
         root.getChildren().remove(cell.getTextClass());
@@ -54,6 +79,10 @@ public class Cell {
         cell.setColorByNumber(cell.getNumber());
     }
 
+    /**
+     * This is the function for adding the cells with same value.
+     * @param cell
+     */
     public void adder(Cell cell) {
         cell.getTextClass().setText((cell.getNumber() + this.getNumber()) + "");
         textClass.setText("0");
@@ -62,6 +91,11 @@ public class Cell {
         setColorByNumber(getNumber());
     }
     //refactor using enhance switch statement
+
+    /**
+     * This is the function to change the colour of the cell by setting the fill of the rectangle with a different colour that corresponds to the number/value inside the cell.
+     * @param number
+     */
     public void setColorByNumber(int number) {
         switch (number) {
             case 0 -> rectangle.setFill(Color.rgb(224, 226, 226, 0.3));
@@ -76,36 +110,38 @@ public class Cell {
             case 512 -> rectangle.setFill(Color.rgb(180, 30, 44, 0.6));
             case 1024 -> rectangle.setFill(Color.rgb(250, 0, 44, 0.6));
             case 2048 -> rectangle.setFill(Color.rgb(250, 0, 0, 0.8));
-
-
-//            case 0 -> rectangle.setFill(Color.rgb(224, 226, 226, 0.5));
-//            case 2 -> rectangle.setFill(Color.rgb(232, 255, 100, 0.5));
-//            case 4 -> rectangle.setFill(Color.rgb(232, 220, 50, 0.5));
-//            case 8 -> rectangle.setFill(Color.rgb(232, 200, 44, 0.8));
-//            case 16 -> rectangle.setFill(Color.rgb(232, 170, 44, 0.8));
-//            case 32 -> rectangle.setFill(Color.rgb(180, 120, 44, 0.7));
-//            case 64 -> rectangle.setFill(Color.rgb(180, 100, 44, 0.7));
-//            case 128 -> rectangle.setFill(Color.rgb(180, 80, 44, 0.7));
-//            case 256 -> rectangle.setFill(Color.rgb(180, 60, 44, 0.8));
-//            case 512 -> rectangle.setFill(Color.rgb(180, 30, 44, 0.8));
-//            case 1024 -> rectangle.setFill(Color.rgb(250, 0, 44, 0.8));
-//            case 2048 -> rectangle.setFill(Color.rgb(250, 0, 0, 1));
         }
 
     }
 
+    /**
+     * This is the getter for X.
+     * @return
+     */
     public double getX() {
         return rectangle.getX();
     }
 
+    /**
+     * This is the getter for Y.
+     * @return
+     */
     public double getY() {
         return rectangle.getY();
     }
 
+    /**
+     * This is the getter for the number.
+     * @return
+     */
     public int getNumber() {
         return Integer.parseInt(textClass.getText());
     }
 
+    /**
+     * This is the getter for the TextClass.
+     * @return
+     */
     private Text getTextClass() {
         return textClass;
     }

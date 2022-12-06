@@ -1,7 +1,13 @@
 package com.example.game2048.model;
+/**
+ * @author Ruland Muhammad Furqan-modified
+ */
 
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class Account implements Comparable<Account> {
     private long score = 0;
     private final String userName ;

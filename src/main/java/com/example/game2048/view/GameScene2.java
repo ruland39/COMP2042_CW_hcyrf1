@@ -1,4 +1,7 @@
 package com.example.game2048.view;
+/**
+ * @author Ruland Muhammad Furqan
+ */
 
 import com.example.game2048.model.Cell;
 import com.example.game2048.utility.TextMaker;

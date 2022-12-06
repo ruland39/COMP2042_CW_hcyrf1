@@ -1,4 +1,7 @@
 package com.example.game2048.view;
+/**
+ * @author Ruland Muhammad Furqan-modified
+ */
 
 import com.example.game2048.Main;
 import com.example.game2048.controller.Controller;
@@ -37,6 +40,13 @@ public class EndGame {
         return singleInstance;
     }
 
+    /**
+     * This is the function to show the endGameScene when the user has reached limited moves during the gameScene. This endGame scene displays the game over text, the score, a table view containing the username as well as the highscore of the user, retry button, and a quit button to end the game.
+     * @param endGameScene
+     * @param root
+     * @param primaryStage
+     * @param score
+     */
     public void endGameShow(Scene endGameScene, Group root, Stage primaryStage,long score){
 
         //Name Text
@@ -119,6 +129,10 @@ public class EndGame {
             private Scene gameScene;
             private Group gameRoot;
 
+            /**
+             * This is the function that listens for a click on the retry button to change the endgame scene to the main menu.
+             * @param mouseEvent
+             */
             @Override
             public void handle(MouseEvent mouseEvent) {
                 root.getChildren().clear();
@@ -141,10 +155,18 @@ public class EndGame {
                 
             }
 
+            /**
+             * This is the setter for the GameScene
+             * @param gameScene
+             */
             private void setGameScene(Scene gameScene) {
                 this.gameScene = gameScene;
             }
 
+            /**
+             * This is the setter for the GameRoot
+             * @param gameRoot
+             */
             private void setGameRoot(Group gameRoot) {
                 this.gameRoot = gameRoot;
             }
@@ -184,6 +206,11 @@ public class EndGame {
         quitButton.relocate(400,640);
         quitButton.setStyle("-fx-background-radius: 20; -fx-border-width: 3; -fx-border-color: gray; -fx-border-radius: 20;");
         quitButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+            /**
+             * This is the function that listens for a click on the quit button to ask for the user if they want to quit the game or no. If the user wants to quit, it removes the endGame Scene from the stage and closes it.
+             * @param event
+             */
             @Override
             public void handle(MouseEvent event) {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

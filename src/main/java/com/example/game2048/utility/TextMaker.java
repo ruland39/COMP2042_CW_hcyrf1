@@ -1,5 +1,7 @@
 package com.example.game2048.utility;
-
+/**
+ * @author Ruland Muhammad Furqan-modified
+ */
 import com.example.game2048.view.GameScene;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
@@ -20,6 +22,14 @@ public class TextMaker {
         return singleInstance;
     }
 
+    /**
+     * This is the function where the text are generated for the text inside the cell
+     * @param input
+     * @param xCell
+     * @param yCell
+     * @param root
+     * @return
+     */
     public Text madeText(String input, double xCell, double yCell, Group root) {
 
         double length = GameScene.getLENGTH();
@@ -35,6 +45,11 @@ public class TextMaker {
         return text;
     }
 
+    /**
+     * This is the function to change the text content
+     * @param first
+     * @param second
+     */
     public static void changeTwoText(Text first, Text second) {
         String temp;
         temp = first.getText();

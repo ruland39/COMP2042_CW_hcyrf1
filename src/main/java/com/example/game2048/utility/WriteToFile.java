@@ -1,4 +1,7 @@
 package com.example.game2048.utility;
+/**
+ * @author Ruland Muhammad Furqan
+ */
 
 import com.example.game2048.model.HighScore;
 

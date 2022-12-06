@@ -1,5 +1,7 @@
 package com.example.game2048.controller;
-
+/**
+ * @author Ruland Muhammad Furqan-modified
+ */
 import com.example.game2048.view.*;
 import javafx.animation.*;
 import javafx.event.ActionEvent;
@@ -55,6 +57,10 @@ public class Controller implements Initializable {
 
 
     //  Open Normal Game Mode
+    /**
+     * This is the function to openGameScene that is being used by the button at the mainmenu fxml that will launch the gameScene to start the game.
+     * @param actionEvent
+     */
     public void openGameScene(ActionEvent actionEvent) {
 
         playBtn.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -118,6 +124,10 @@ public class Controller implements Initializable {
 
     }
 
+    /**
+     * This is the function to openGameScene2 that is being used by the button at the mainmenu fxml that will launch the gameScene2 to start the game.
+     * @param actionEvent
+     */
     // open Game Scene 2 (Reversible Arrow) 2x2
     public void openGameScene2(ActionEvent actionEvent) {
         playBtn2.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -181,7 +191,10 @@ public class Controller implements Initializable {
     }
 
     // open Game Scene 3 (Reversible Arrow) 3x3
-
+    /**
+     * This is the function to openGameScene that is being used by the button at the mainmenu fxml that will launch the gameScene3 to start the game.
+     * @param actionEvent
+     */
     public void openGameScene3(ActionEvent actionEvent) {
         playBtn3.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene3;
@@ -244,7 +257,10 @@ public class Controller implements Initializable {
     }
 
     // open Game Scene 4 (Reversible Arrow) 4x4
-
+    /**
+     * This is the function to openGameScene4 that is being used by the button at the mainmenu fxml that will launch the gameScene4 to start the game.
+     * @param actionEvent
+     */
     public void openGameScene4(ActionEvent actionEvent) {
         playBtn4.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene4;
@@ -308,7 +324,10 @@ public class Controller implements Initializable {
 
 
     // open Game Scene 5 (Reversible Arrow) 5x5
-
+    /**
+     * This is the function to openGameScene5 that is being used by the button at the mainmenu fxml that will launch the gameScene5 to start the game.
+     * @param actionEvent
+     */
     public void openGameScene5(ActionEvent actionEvent) {
         playBtn5.setOnMouseClicked(new EventHandler<MouseEvent>() {
             private Scene gameScene5;
@@ -370,7 +389,10 @@ public class Controller implements Initializable {
         });
     }
 
-
+    /**
+     * This is the function for the toggle button at the main menu that will cycle an array list of pre-selected colors and is being picked by a generated number using random number generator.
+     * @param actionEvent
+     */
     @FXML
     // Color changing part for all scenes
     public void toggleMode(ActionEvent actionEvent) {
@@ -403,6 +425,12 @@ public class Controller implements Initializable {
     }
 
     // Animation for 2048 Text
+
+    /**
+     * This is the function of initilaize
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ScaleTransition scale = new ScaleTransition();
