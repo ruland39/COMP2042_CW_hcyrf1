@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -280,18 +282,36 @@ public class GameScene {
         //Font for Text
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 40);
 
+
+        // Rectangle Container for Score
+        Rectangle rectangle = new Rectangle();
+        rectangle.setWidth(150);
+        rectangle.prefWidth(150);
+        rectangle.setHeight(120);
+        rectangle.prefHeight(120);
+        rectangle.setArcWidth(24);
+        rectangle.setArcHeight(24);
+        rectangle.setFill(Color.rgb(224, 226, 226, 0.7));
+        rectangle.relocate(720, 100);
+        root.getChildren().add(rectangle);
+
+
         // Score Text Title
-        Text scoretexttitle = new Text();
-        root.getChildren().add(scoretexttitle);
-        scoretexttitle.setText("Score");
-        scoretexttitle.setFont(font);
-        scoretexttitle.relocate(730, 100);
+        Text scoreTextTitle = new Text();
+        root.getChildren().add(scoreTextTitle);
+        scoreTextTitle.setText("Score");
+        scoreTextTitle.setFont(font);
+        scoreTextTitle.setFill(Color.WHITE);
+//        scoreTextTitle.setStrokeWidth(1);
+//        scoreTextTitle.setStroke(Color.BLACK);
+        scoreTextTitle.relocate(730, 100);
 
         // Score Text
         Text scoreText = new Text();
         root.getChildren().add(scoreText);
         scoreText.relocate(760, 180);
         scoreText.setFont(font);
+        scoreText.setFill(Color.WHITE);
         scoreText.setText("0");
 
 
