@@ -1,5 +1,6 @@
-package com.example.game2048;
+package com.example.game2048.view;
 
+import com.example.game2048.Main;
 import com.example.game2048.controller.Controller;
 import com.example.game2048.model.HighScore;
 import com.example.game2048.utility.WriteToFile;

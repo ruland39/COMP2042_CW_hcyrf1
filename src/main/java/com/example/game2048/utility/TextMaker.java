@@ -1,6 +1,6 @@
 package com.example.game2048.utility;
 
-import com.example.game2048.GameScene;
+import com.example.game2048.view.GameScene;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;

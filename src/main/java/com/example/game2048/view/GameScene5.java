@@ -1,4 +1,4 @@
-package com.example.game2048;
+package com.example.game2048.view;
 
 import com.example.game2048.model.Cell;
 import com.example.game2048.utility.TextMaker;
@@ -17,10 +17,10 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-    //Game Scene for Interesting Game Mode: 5x5 or Blind Mode
-public class GameScene2 {
+//Game Scene for Interesting Game Mode: 5x5 or Blind Mode
+public class GameScene5 {
     private static int HEIGHT = 700;
-    public static int n = 2;
+    public static int n = 5;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
@@ -316,7 +316,6 @@ public class GameScene2 {
         scoreText.setFill(Color.WHITE);
         scoreText.setText("0");
 
-
         randomFillNumber(1);
         randomFillNumber(1);
 
@@ -339,28 +338,28 @@ public class GameScene2 {
 
                 if(b == true) {
 
-                // Reversible Arrow Function
+                    // Reversible Arrow Function
 
-                // Up Arrow/W becomes moveDown
-                // Down Arrow/S becomes moveUp
-                // Left Arrow/A becomes moveRight
-                // Right Arrow/D becomes moveLeft
+                    // Up Arrow/W becomes moveDown
+                    // Down Arrow/S becomes moveUp
+                    // Left Arrow/A becomes moveRight
+                    // Right Arrow/D becomes moveLeft
 
                     if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene2.this.moveUp();
+                        GameScene5.this.moveUp();
                     } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                        GameScene2.this.moveDown();
+                        GameScene5.this.moveDown();
                     } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene2.this.moveRight();
+                        GameScene5.this.moveRight();
                     } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                        GameScene2.this.moveLeft();
+                        GameScene5.this.moveLeft();
                     }
                 }
 
                 scoreText.setText(score + "");
-                haveEmptyCell = GameScene2.this.haveEmptyCell();
+                haveEmptyCell = GameScene5.this.haveEmptyCell();
                 if (haveEmptyCell == -1) {
-                    if (GameScene2.this.canNotMove()) {
+                    if (GameScene5.this.canNotMove()) {
                         primaryStage.setScene(endGameScene);
 
                         EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
@@ -368,7 +367,7 @@ public class GameScene2 {
                         score = 0;
                     }
                 } else if(haveEmptyCell == 1 && b)
-                    GameScene2.this.randomFillNumber(2);
+                    GameScene5.this.randomFillNumber(2);
             });
         });
 

@@ -1,4 +1,4 @@
-package com.example.game2048;
+package com.example.game2048.view;
 
 import com.example.game2048.model.Cell;
 import com.example.game2048.utility.TextMaker;
@@ -18,9 +18,9 @@ import javafx.stage.Stage;
 import java.util.Random;
 
 //Game Scene for Interesting Game Mode: 5x5 or Blind Mode
-public class GameScene5 {
+public class GameScene3 {
     private static int HEIGHT = 700;
-    public static int n = 5;
+    public static int n = 3;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
@@ -346,20 +346,20 @@ public class GameScene5 {
                     // Right Arrow/D becomes moveLeft
 
                     if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene5.this.moveUp();
+                        GameScene3.this.moveUp();
                     } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                        GameScene5.this.moveDown();
+                        GameScene3.this.moveDown();
                     } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene5.this.moveRight();
+                        GameScene3.this.moveRight();
                     } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                        GameScene5.this.moveLeft();
+                        GameScene3.this.moveLeft();
                     }
                 }
 
                 scoreText.setText(score + "");
-                haveEmptyCell = GameScene5.this.haveEmptyCell();
+                haveEmptyCell = GameScene3.this.haveEmptyCell();
                 if (haveEmptyCell == -1) {
-                    if (GameScene5.this.canNotMove()) {
+                    if (GameScene3.this.canNotMove()) {
                         primaryStage.setScene(endGameScene);
 
                         EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
@@ -367,7 +367,7 @@ public class GameScene5 {
                         score = 0;
                     }
                 } else if(haveEmptyCell == 1 && b)
-                    GameScene5.this.randomFillNumber(2);
+                    GameScene3.this.randomFillNumber(2);
             });
         });
 

@@ -1,4 +1,4 @@
-package com.example.game2048;
+package com.example.game2048.view;
 
 import com.example.game2048.model.Cell;
 import com.example.game2048.utility.TextMaker;
@@ -17,18 +17,16 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-//Game Scene for Interesting Game Mode: 5x5 or Blind Mode
-public class GameScene4 {
+public class GameScene {
     private static int HEIGHT = 700;
-    public static int n = 4;
+    private static int n = 4;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
     private Cell[][] cells = new Cell[n][n];
     private Group root;
-
-    // Arrow List for randomising arrow function
     private long score = 0;
+
     private TextField nameBox;
 
     static void setN(int number) {
@@ -36,7 +34,7 @@ public class GameScene4 {
         LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     }
 
-    static double getLENGTH() {
+    public static double getLENGTH() {
         return LENGTH;
     }
 
@@ -74,8 +72,8 @@ public class GameScene4 {
         if (random.nextInt() % 2 == 0)
             putTwo = false;
         int xCell, yCell;
-        xCell = random.nextInt(aForBound+1);
-        yCell = random.nextInt(bForBound+1);
+            xCell = random.nextInt(aForBound+1);
+            yCell = random.nextInt(bForBound+1);
         if (putTwo) {
             text = textMaker.madeText("2", emptyCells[xCell][yCell].getX(), emptyCells[xCell][yCell].getY(), root);
             emptyCells[xCell][yCell].setTextClass(text);
@@ -285,6 +283,7 @@ public class GameScene4 {
         //Font for Text
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 40);
 
+
         // Rectangle Container for Score
         Rectangle rectangle = new Rectangle();
         rectangle.setWidth(150);
@@ -316,60 +315,53 @@ public class GameScene4 {
         scoreText.setFill(Color.WHITE);
         scoreText.setText("0");
 
-        randomFillNumber(1);
-        randomFillNumber(1);
 
+        randomFillNumber(1);
+        randomFillNumber(1);
 
         gameScene.addEventHandler(KeyEvent.KEY_PRESSED, key ->{
-            Platform.runLater(() -> {
-                int haveEmptyCell;
-                //key inputs
-                boolean b = false;
-                if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
-                        || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
-                )
-                {
-                    b = true;
-                }
-                else {
-                    b = false;
-                }
-
-
-                if(b == true) {
-
-                    // Reversible Arrow Function
-
-                    // Up Arrow/W becomes moveDown
-                    // Down Arrow/S becomes moveUp
-                    // Left Arrow/A becomes moveRight
-                    // Right Arrow/D becomes moveLeft
-
-                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene4.this.moveUp();
-                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                        GameScene4.this.moveDown();
-                    } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene4.this.moveRight();
-                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                        GameScene4.this.moveLeft();
+                Platform.runLater(() -> {
+                    int haveEmptyCell;
+                    //key inputs
+                    boolean b = false;
+                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
+                     || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
+                    )
+                    {
+                        b = true;
                     }
-                }
-
-                scoreText.setText(score + "");
-                haveEmptyCell = GameScene4.this.haveEmptyCell();
-                if (haveEmptyCell == -1) {
-                    if (GameScene4.this.canNotMove()) {
-                        primaryStage.setScene(endGameScene);
-
-                        EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
-                        root.getChildren().clear();
-                        score = 0;
+                    else {
+                        b = false;
                     }
-                } else if(haveEmptyCell == 1 && b)
-                    GameScene4.this.randomFillNumber(2);
+
+
+                    if(b == true) {
+
+                        if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
+                            GameScene.this.moveDown();
+                        } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
+                            GameScene.this.moveUp();
+                        } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
+                            GameScene.this.moveLeft();
+                        } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
+                            GameScene.this.moveRight();
+                        }
+                    }
+
+                    scoreText.setText(score + "");
+                    haveEmptyCell = GameScene.this.haveEmptyCell();
+                    if (haveEmptyCell == -1) {
+                        if (GameScene.this.canNotMove()) {
+                            primaryStage.setScene(endGameScene);
+
+                            EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
+                            root.getChildren().clear();
+                            score = 0;
+                        }
+                    } else if(haveEmptyCell == 1 && b)
+                        GameScene.this.randomFillNumber(2);
+                });
             });
-        });
 
     }
 }
