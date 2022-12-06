@@ -24,7 +24,7 @@ were not implemented,
 10. You are good to go to play the game. Press Run and Have Fun!
 
 ## Javadoc Documentation
-Javadoc Documentation is available [here](JavaDoc/com.example.demo/module-summary.html) JavaDoc/com.example.demo/module-summary.html
+Javadoc Documentation is available at `JavaDoc/com.example.demo/module-summary.html` or [here](https://github.com/ruland39/COMP2042_CW_hcyrf1/blob/827d25dfd4baf1e51a0b3da3b1aadbebac82f75f/JavaDoc/com.example.demo/module-summary.html)
 
 ## Design Diagram
 Design Diagram PDF is available [here](https://www.youtube.com)
