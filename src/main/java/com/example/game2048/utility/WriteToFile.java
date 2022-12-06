@@ -36,6 +36,12 @@ public class WriteToFile {
         }
     }
 
+    /**
+     * This is the function that will update the contents of the Table View of Rank.
+     * @param name
+     * @param text
+     * @throws IOException
+     */
     public static void updateFile(String name, String text) throws IOException {
         File myObj = new File(name);
 
@@ -58,6 +64,12 @@ public class WriteToFile {
         allUserAccount.add(text);
     }
 
+    /**
+     * This is the function to retrieve information from the list of the Table View of the Rank.
+     * @param name
+     * @return
+     * @throws FileNotFoundException
+     */
     public static List<HighScore> getAllScore(String name) throws FileNotFoundException {
         File myObj = new File(name);
 

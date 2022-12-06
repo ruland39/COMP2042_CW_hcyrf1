@@ -22,9 +22,6 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Main extends Application {
-    //Additions
-    // Slide speed animation
-    public static final int SLIDE_SPEED = 20;
 
     public static final int WIDTH = 900;
     public static final int HEIGHT = 700;

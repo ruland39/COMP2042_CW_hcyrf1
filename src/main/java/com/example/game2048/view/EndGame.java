@@ -196,7 +196,6 @@ public class EndGame {
         }
 
 
-
         //Quit Button
         Button quitButton = new Button("Quit");
         quitButton.setPrefSize(120,50);
