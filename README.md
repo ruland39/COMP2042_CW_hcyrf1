@@ -1,15 +1,6 @@
 # COMP2042_CW_hcyrf1  
 Ruland Muhammad Furqan - 20312846  
 2048 Game
-1. Your name and student number,
-2. How to compile the code to produce the application,
-3. Where your Javadoc documentation is stored (the path to the directory)
-4. A list of features that are implemented and are working properly,
-5. A list of features that are implemented and are not working properly,
-6. A list of features, if any, that are not implemented with an explanation of why they
-were not implemented,
-7. A list of new Java classes that you introduced for the assignment,
-8. A list of Java classes that you modified from the given code base
 
 ## How to Compile and Run 2048 Game
 1. Download the Source Code ZIP File by pressing the Green Code Button
