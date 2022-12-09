@@ -27,7 +27,7 @@ were not implemented,
 Javadoc Documentation is available at `JavaDoc/com.example.demo/module-summary.html` or [here](https://github.com/ruland39/COMP2042_CW_hcyrf1/blob/827d25dfd4baf1e51a0b3da3b1aadbebac82f75f/JavaDoc/com.example.demo/module-summary.html)
 
 ## Design Diagram
-Design Diagram PDF is available [here](https://www.youtube.com)
+Design Diagram PDF is available at `Class Diagram - 2048 Game.jpg` or [here](https://imgur.com/a/bnCNxW5)
 
 ## List of Features
 ### List of Features that are implemented and working properly
