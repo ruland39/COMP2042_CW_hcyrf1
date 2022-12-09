@@ -1,8 +1,8 @@
-package com.example.game2048.controller;
+package com.game2048.controller;
 /**
  * @author Ruland Muhammad Furqan-modified
  */
-import com.example.game2048.view.*;
+import com.game2048.view.*;
 import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -29,8 +29,8 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.example.game2048.Main.HEIGHT;
-import static com.example.game2048.Main.WIDTH;
+import static com.game2048.Main.HEIGHT;
+import static com.game2048.Main.WIDTH;
 
 public class Controller implements Initializable {
 

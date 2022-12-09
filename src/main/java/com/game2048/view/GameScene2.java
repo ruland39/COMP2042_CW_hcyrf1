@@ -1,10 +1,10 @@
-package com.example.game2048.view;
+package com.game2048.view;
 /**
  * @author Ruland Muhammad Furqan
  */
 
-import com.example.game2048.model.Cell;
-import com.example.game2048.utility.TextMaker;
+import com.game2048.model.Cell;
+import com.game2048.utility.TextMaker;
 import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -20,10 +20,10 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-//Game Scene for Interesting Game Mode: 5x5 or Blind Mode
-public class GameScene4 {
+    //Game Scene for Interesting Game Mode: 5x5 or Blind Mode
+public class GameScene2 {
     private static int HEIGHT = 700;
-    public static int n = 4;
+    public static int n = 2;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
@@ -319,6 +319,7 @@ public class GameScene4 {
         scoreText.setFill(Color.WHITE);
         scoreText.setText("0");
 
+
         randomFillNumber(1);
         randomFillNumber(1);
 
@@ -341,28 +342,28 @@ public class GameScene4 {
 
                 if(b == true) {
 
-                    // Reversible Arrow Function
+                // Reversible Arrow Function
 
-                    // Up Arrow/W becomes moveDown
-                    // Down Arrow/S becomes moveUp
-                    // Left Arrow/A becomes moveRight
-                    // Right Arrow/D becomes moveLeft
+                // Up Arrow/W becomes moveDown
+                // Down Arrow/S becomes moveUp
+                // Left Arrow/A becomes moveRight
+                // Right Arrow/D becomes moveLeft
 
                     if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene4.this.moveUp();
+                        GameScene2.this.moveUp();
                     } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                        GameScene4.this.moveDown();
+                        GameScene2.this.moveDown();
                     } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene4.this.moveRight();
+                        GameScene2.this.moveRight();
                     } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                        GameScene4.this.moveLeft();
+                        GameScene2.this.moveLeft();
                     }
                 }
 
                 scoreText.setText(score + "");
-                haveEmptyCell = GameScene4.this.haveEmptyCell();
+                haveEmptyCell = GameScene2.this.haveEmptyCell();
                 if (haveEmptyCell == -1) {
-                    if (GameScene4.this.canNotMove()) {
+                    if (GameScene2.this.canNotMove()) {
                         primaryStage.setScene(endGameScene);
 
                         EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
@@ -370,7 +371,7 @@ public class GameScene4 {
                         score = 0;
                     }
                 } else if(haveEmptyCell == 1 && b)
-                    GameScene4.this.randomFillNumber(2);
+                    GameScene2.this.randomFillNumber(2);
             });
         });
 

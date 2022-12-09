@@ -1,6 +1,6 @@
 module:com.example.demo
 com.example.game2048
-com.example.game2048.controller
-com.example.game2048.model
-com.example.game2048.utility
-com.example.game2048.view
+com.game2048.controller
+com.game2048.model
+com.game2048.utility
+com.game2048.view

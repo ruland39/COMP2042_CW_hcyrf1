@@ -1,12 +1,12 @@
-package com.example.game2048.view;
+package com.game2048.view;
 /**
  * @author Ruland Muhammad Furqan-modified
  */
 
-import com.example.game2048.Main;
-import com.example.game2048.controller.Controller;
-import com.example.game2048.model.HighScore;
-import com.example.game2048.utility.WriteToFile;
+import com.game2048.Main;
+import com.game2048.controller.Controller;
+import com.game2048.model.HighScore;
+import com.game2048.utility.WriteToFile;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;

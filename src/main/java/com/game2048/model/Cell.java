@@ -1,9 +1,9 @@
-package com.example.game2048.model;
+package com.game2048.model;
 /**
  * @author Ruland Muhammad Furqan-modified
  */
 
-import com.example.game2048.utility.TextMaker;
+import com.game2048.utility.TextMaker;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;

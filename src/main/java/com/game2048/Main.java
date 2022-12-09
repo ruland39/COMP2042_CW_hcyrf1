@@ -1,10 +1,10 @@
-package com.example.game2048;
+package com.game2048;
 
 /**
  * @author Ruland Muhammad Furqan-modified
  */
 
-import com.example.game2048.controller.Controller;
+import com.game2048.controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -75,7 +75,7 @@ public class Main extends Application {
      * This function is to play background music throughout when the program is run.
      */
     public void music(){
-        Media h = new Media(new File("src/main/resources/com/example/game2048/bgmusic.mp3").toURI().toString());
+        Media h = new Media(new File("src/main/resources/com/game2048/bgmusic.mp3").toURI().toString());
         mediaPlayer = new MediaPlayer(h);
         mediaPlayer.setOnEndOfMedia(new Runnable() {
             @Override

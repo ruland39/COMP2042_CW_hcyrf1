@@ -1,9 +1,9 @@
-package com.example.game2048.utility;
+package com.game2048.utility;
 /**
  * @author Ruland Muhammad Furqan
  */
 
-import com.example.game2048.model.HighScore;
+import com.game2048.model.HighScore;
 
 import java.io.File;
 import java.io.FileNotFoundException;

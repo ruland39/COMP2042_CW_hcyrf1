@@ -1,10 +1,10 @@
-package com.example.game2048.view;
+package com.game2048.view;
 /**
- * @author Ruland Muhammad Furqan-modified
+ * @author Ruland Muhammad Furqan
  */
 
-import com.example.game2048.model.Cell;
-import com.example.game2048.utility.TextMaker;
+import com.game2048.model.Cell;
+import com.game2048.utility.TextMaker;
 import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -20,37 +20,29 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-public class GameScene {
+//Game Scene for Interesting Game Mode: 5x5 or Blind Mode
+public class GameScene3 {
     private static int HEIGHT = 700;
-    private static int n = 4;
+    public static int n = 3;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
     private Cell[][] cells = new Cell[n][n];
     private Group root;
-    private long score = 0;
 
-    /**
-     * This is the function of setting the value of N.
-     * @param number
-     */
+    // Arrow List for randomising arrow function
+    private long score = 0;
+    private TextField nameBox;
+
     static void setN(int number) {
         n = number;
         LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     }
 
-    /**
-     * This is the getter for the length.
-     * @return
-     */
-    public static double getLENGTH() {
+    static double getLENGTH() {
         return LENGTH;
     }
 
-    /**
-     * This is the function of spawning cells randomly with corresponding random numbers into it.
-     * @param turn
-     */
     private void randomFillNumber(int turn) {
 
         Cell[][] emptyCells = new Cell[n][n];
@@ -85,8 +77,8 @@ public class GameScene {
         if (random.nextInt() % 2 == 0)
             putTwo = false;
         int xCell, yCell;
-            xCell = random.nextInt(aForBound+1);
-            yCell = random.nextInt(bForBound+1);
+        xCell = random.nextInt(aForBound+1);
+        yCell = random.nextInt(bForBound+1);
         if (putTwo) {
             text = textMaker.madeText("2", emptyCells[xCell][yCell].getX(), emptyCells[xCell][yCell].getY(), root);
             emptyCells[xCell][yCell].setTextClass(text);
@@ -100,10 +92,6 @@ public class GameScene {
         }
     }
 
-    /**
-     * This is the function of checking whether it has an empty cell or not.
-     * @return
-     */
     private int  haveEmptyCell() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -116,13 +104,6 @@ public class GameScene {
         return -1;
     }
 
-    /**
-     * This is the function where the cell will have its movement logic and move the cells around the containing cells.
-     * @param i
-     * @param j
-     * @param direct
-     * @return
-     */
     private int passDestination(int i, int j, char direct) {
         int coordinate = j;
         if (direct == 'l') {
@@ -176,9 +157,6 @@ public class GameScene {
         return -1;
     }
 
-    /**
-     * This is the function of moving the cells to the left hand side.
-     */
     private void moveLeft() {
         for (int i = 0; i < n; i++) {
             for (int j = 1; j < n; j++) {
@@ -190,9 +168,6 @@ public class GameScene {
         }
     }
 
-    /**
-     * This is the function of moving the cells to the right hand side.
-     */
     private void moveRight() {
         for (int i = 0; i < n; i++) {
             for (int j = n - 1; j >= 0; j--) {
@@ -204,9 +179,6 @@ public class GameScene {
         }
     }
 
-    /**
-     * This is the function of moving the cells up.
-     */
     private void moveUp() {
         for (int j = 0; j < n; j++) {
             for (int i = 1; i < n; i++) {
@@ -219,9 +191,6 @@ public class GameScene {
 
     }
 
-    /**
-     * This is the function of moving the cells down.
-     */
     private void moveDown() {
         for (int j = 0; j < n; j++) {
             for (int i = n - 1; i >= 0; i--) {
@@ -234,14 +203,6 @@ public class GameScene {
 
     }
 
-    /**
-     * This is the function to check if the destination path/movement of the cells is correct or wrong in the horizontal axis.
-     * @param i
-     * @param j
-     * @param des
-     * @param sign
-     * @return
-     */
     private boolean isValidDesH(int i, int j, int des, int sign) {
         if (des + sign < n && des + sign >= 0) {
             if (cells[i][des + sign].getNumber() == cells[i][j].getNumber() && cells[i][des + sign].getModify()
@@ -252,13 +213,6 @@ public class GameScene {
         return false;
     }
 
-    /**
-     * This is the function to move the cells horizontally.
-     * @param i
-     * @param j
-     * @param des
-     * @param sign
-     */
     private void moveHorizontally(int i, int j, int des, int sign) {
         if (isValidDesH(i, j, des, sign)) {
             cells[i][j].adder(cells[i][des + sign]);
@@ -271,14 +225,6 @@ public class GameScene {
         }
     }
 
-    /**
-     * This is the function to check if the destination path/movement of the cells is correct or wrong in the vertical axis.
-     * @param i
-     * @param j
-     * @param des
-     * @param sign
-     * @return
-     */
     private boolean isValidDesV(int i, int j, int des, int sign) {
         if (des + sign < n && des + sign >= 0)
             if (cells[des + sign][j].getNumber() == cells[i][j].getNumber() && cells[des + sign][j].getModify()
@@ -288,13 +234,6 @@ public class GameScene {
         return false;
     }
 
-    /**
-     * This is the function to move the cells vertically.
-     * @param i
-     * @param j
-     * @param des
-     * @param sign
-     */
     private void moveVertically(int i, int j, int des, int sign) {
         if (isValidDesV(i, j, des, sign)) {
             cells[i][j].adder(cells[des + sign][j]);
@@ -307,12 +246,6 @@ public class GameScene {
         }
     }
 
-    /**
-     * This is the function to check if the cells nearby have the same number or not.
-     * @param i
-     * @param j
-     * @return
-     */
     private boolean haveSameNumberNearly(int i, int j) {
         if (i < n - 1 && j < n - 1) {
             if (cells[i + 1][j].getNumber() == cells[i][j].getNumber())
@@ -323,10 +256,6 @@ public class GameScene {
         return false;
     }
 
-    /**
-     * This is the function to check if the cells can move or not.
-     * @return
-     */
     private boolean canNotMove() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -338,9 +267,6 @@ public class GameScene {
         return true;
     }
 
-    /**
-     * This is the function to sum the cell number to the score text.
-     */
     private void sumCellNumbersToScore() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -349,14 +275,6 @@ public class GameScene {
         }
     }
 
-    /**
-     * This is the function to set up the GameScene to be able for the game to be played. The Stage and Scene will also be initialized here. This also includes the cells' container/grid for the cells to be placed, the score text as well as the numbers inside the cell and the corresponding color of it.
-     * @param gameScene
-     * @param root
-     * @param primaryStage
-     * @param endGameScene
-     * @param endGameRoot
-     */
     public void game(Scene gameScene, Group root, Stage primaryStage, Scene endGameScene, Group endGameRoot) {
         this.root = root;
         for (int i = 0; i < n; i++) {
@@ -369,7 +287,6 @@ public class GameScene {
 
         //Font for Text
         Font font = Font.font("Comic Sans MS", FontWeight.NORMAL, 40);
-
 
         // Rectangle Container for Score
         Rectangle rectangle = new Rectangle();
@@ -402,53 +319,60 @@ public class GameScene {
         scoreText.setFill(Color.WHITE);
         scoreText.setText("0");
 
+        randomFillNumber(1);
+        randomFillNumber(1);
 
-        randomFillNumber(1);
-        randomFillNumber(1);
 
         gameScene.addEventHandler(KeyEvent.KEY_PRESSED, key ->{
-                Platform.runLater(() -> {
-                    int haveEmptyCell;
-                    //key inputs
-                    boolean b = false;
-                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
-                     || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
-                    )
-                    {
-                        b = true;
+            Platform.runLater(() -> {
+                int haveEmptyCell;
+                //key inputs
+                boolean b = false;
+                if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.UP || key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.RIGHT
+                        || key.getCode() == KeyCode.S || key.getCode() == KeyCode.W || key.getCode() == KeyCode.A || key.getCode() == KeyCode.D
+                )
+                {
+                    b = true;
+                }
+                else {
+                    b = false;
+                }
+
+
+                if(b == true) {
+
+                    // Reversible Arrow Function
+
+                    // Up Arrow/W becomes moveDown
+                    // Down Arrow/S becomes moveUp
+                    // Left Arrow/A becomes moveRight
+                    // Right Arrow/D becomes moveLeft
+
+                    if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
+                        GameScene3.this.moveUp();
+                    } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
+                        GameScene3.this.moveDown();
+                    } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
+                        GameScene3.this.moveRight();
+                    } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
+                        GameScene3.this.moveLeft();
                     }
-                    else {
-                        b = false;
+                }
+
+                scoreText.setText(score + "");
+                haveEmptyCell = GameScene3.this.haveEmptyCell();
+                if (haveEmptyCell == -1) {
+                    if (GameScene3.this.canNotMove()) {
+                        primaryStage.setScene(endGameScene);
+
+                        EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
+                        root.getChildren().clear();
+                        score = 0;
                     }
-
-
-                    if(b == true) {
-
-                        if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                            GameScene.this.moveDown();
-                        } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                            GameScene.this.moveUp();
-                        } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                            GameScene.this.moveLeft();
-                        } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                            GameScene.this.moveRight();
-                        }
-                    }
-
-                    scoreText.setText(score + "");
-                    haveEmptyCell = GameScene.this.haveEmptyCell();
-                    if (haveEmptyCell == -1) {
-                        if (GameScene.this.canNotMove()) {
-                            primaryStage.setScene(endGameScene);
-
-                            EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
-                            root.getChildren().clear();
-                            score = 0;
-                        }
-                    } else if(haveEmptyCell == 1 && b)
-                        GameScene.this.randomFillNumber(2);
-                });
+                } else if(haveEmptyCell == 1 && b)
+                    GameScene3.this.randomFillNumber(2);
             });
+        });
 
     }
 }

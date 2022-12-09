@@ -1,9 +1,10 @@
-package com.example.game2048.view;
+package com.game2048.view;
 /**
  * @author Ruland Muhammad Furqan
  */
-import com.example.game2048.model.Cell;
-import com.example.game2048.utility.TextMaker;
+
+import com.game2048.model.Cell;
+import com.game2048.utility.TextMaker;
 import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -20,9 +21,9 @@ import javafx.stage.Stage;
 import java.util.Random;
 
 //Game Scene for Interesting Game Mode: 5x5 or Blind Mode
-public class GameScene5 {
+public class GameScene4 {
     private static int HEIGHT = 700;
-    public static int n = 5;
+    public static int n = 4;
     private final static int distanceBetweenCells = 10;
     private static double LENGTH = (HEIGHT - ((n + 1) * distanceBetweenCells)) / (double) n;
     private TextMaker textMaker = TextMaker.getSingleInstance();
@@ -348,20 +349,20 @@ public class GameScene5 {
                     // Right Arrow/D becomes moveLeft
 
                     if (key.getCode() == KeyCode.DOWN || key.getCode() == KeyCode.S) {
-                        GameScene5.this.moveUp();
+                        GameScene4.this.moveUp();
                     } else if (key.getCode() == KeyCode.UP || key.getCode() == KeyCode.W) {
-                        GameScene5.this.moveDown();
+                        GameScene4.this.moveDown();
                     } else if (key.getCode() == KeyCode.LEFT || key.getCode() == KeyCode.A) {
-                        GameScene5.this.moveRight();
+                        GameScene4.this.moveRight();
                     } else if (key.getCode() == KeyCode.RIGHT || key.getCode() == KeyCode.D) {
-                        GameScene5.this.moveLeft();
+                        GameScene4.this.moveLeft();
                     }
                 }
 
                 scoreText.setText(score + "");
-                haveEmptyCell = GameScene5.this.haveEmptyCell();
+                haveEmptyCell = GameScene4.this.haveEmptyCell();
                 if (haveEmptyCell == -1) {
-                    if (GameScene5.this.canNotMove()) {
+                    if (GameScene4.this.canNotMove()) {
                         primaryStage.setScene(endGameScene);
 
                         EndGame.getInstance().endGameShow(endGameScene, endGameRoot, primaryStage, score);
@@ -369,7 +370,7 @@ public class GameScene5 {
                         score = 0;
                     }
                 } else if(haveEmptyCell == 1 && b)
-                    GameScene5.this.randomFillNumber(2);
+                    GameScene4.this.randomFillNumber(2);
             });
         });
 

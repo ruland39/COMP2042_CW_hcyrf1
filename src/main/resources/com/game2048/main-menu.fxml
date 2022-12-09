@@ -38,7 +38,7 @@
 <!--</children>-->
 <!--</AnchorPane>-->
 
-<AnchorPane fx:id="backgroundColor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #FFE15D;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.game2048.controller.Controller">
+<AnchorPane fx:id="backgroundColor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #FFE15D;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game2048.controller.Controller">
     <Text fx:id="text2048" fill="#2d3036" layoutX="194.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2048" textAlignment="CENTER">
         <font>
             <Font name="Comic Sans MS Bold" size="128.0" />

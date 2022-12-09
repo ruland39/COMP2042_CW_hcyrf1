@@ -1,4 +1,4 @@
-package com.example.game2048.model;
+package com.game2048.model;
 /**
  * @author Ruland Muhammad Furqan-modified
  */

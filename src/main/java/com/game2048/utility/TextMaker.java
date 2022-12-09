@@ -1,8 +1,8 @@
-package com.example.game2048.utility;
+package com.game2048.utility;
 /**
  * @author Ruland Muhammad Furqan-modified
  */
-import com.example.game2048.view.GameScene;
+import com.game2048.view.GameScene;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;

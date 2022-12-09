@@ -6,12 +6,80 @@
   <component name="ChangeListManager">
     <list default="true" id="e243eee1-3fd3-47dc-a38d-fe4b533c806b" name="Changes" comment="finish modifying endgame scene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/utility/WriteToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/utility/WriteToFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/EndGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/class-use/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/class-use/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/class-use/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/class-use/Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/controller/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/Account.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/Account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/Cell.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/Cell.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/HighScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/HighScore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/class-use/Account.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/class-use/Account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/class-use/Cell.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/class-use/Cell.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/class-use/HighScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/class-use/HighScore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/model/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/TextMaker.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/TextMaker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/WriteToFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/WriteToFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/class-use/TextMaker.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/class-use/TextMaker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/class-use/WriteToFile.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/class-use/WriteToFile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/utility/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/EndGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/EndGame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene2.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene3.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene4.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene5.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/GameScene5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/EndGame.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/EndGame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene2.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene3.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene4.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene5.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/class-use/GameScene5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/com/example/game2048/view/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/com.example.demo/module-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/com.example.demo/module-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaDoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/model/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/model/HighScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/model/HighScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/utility/TextMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/utility/TextMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/utility/WriteToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/utility/WriteToFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/view/EndGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/view/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/view/GameScene2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/view/GameScene3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/view/GameScene4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game2048/view/GameScene5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/game2048/view/GameScene5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game2048/bgmusic.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/game2048/bgmusic.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game2048/main-menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/game2048/main-menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +130,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="com.example.game2048.Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.game2048.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.game2048.Main" />
       <module name="game2048" />
       <extension name="coverage">
         <pattern>
