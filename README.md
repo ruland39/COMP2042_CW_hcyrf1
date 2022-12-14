@@ -35,7 +35,7 @@ Design Diagram PDF is available at `Class Diagram - 2048 Game.jpg` or [here](htt
 - Permanent HighScore List Table View
 
 ### List of Features that are implemented but not working properly
-- None
+- Junit Testing
 
 ### List of Features that are not implemented
 - ComboBox/ChoiceBox containing all the possible combination for the cell grid e.g.2x2, 3x3, 4x4, 5x5 and only two Play buttons (One for Normal game mode and One for Reversible Arrow Mode)
