@@ -3,15 +3,16 @@ Ruland Muhammad Furqan - 20312846
 2048 Game
 
 ## How to Compile and Run 2048 Game
+This game requires you to use Intellij IDEA as the IDE and make sure that it has Java Version 19 (Oracle OpenJDK version19.0.1)
 1. Download the Source Code ZIP File by pressing the Green Code Button
 2. After finish downloading, extract and open the file
-3. Open your IDE of choice could be IntelliJ or Eclipse 
-4. Open the project file in the IDE
+3. Open Intellij IDEA
+4. Open the project file in the Intellij IDEA
 5. Please download JavaFX from [here](https://gluonhq.com/products/javafx/) Or https://gluonhq.com/products/javafx/
 6. Extract the JavaFX files and go back to your IDE
-7. Navigate through File -> Project Structure -> Library
-8. Press the plus button and add the library folder from the JavaFX files you have downloaded
-9. Build the project files and go to the main.java file
+7. Navigate through File -> Project Structure -> Libraries
+8. Press the plus button one the top and add the `lib` folder from the `javafx-sd-19` you have downloaded, Click Apply then OK
+9. Build the project files and go to the Main.java file
 10. You are good to go to play the game. Press Run and Have Fun!
 
 ## Javadoc Documentation
